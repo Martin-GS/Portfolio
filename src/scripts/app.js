@@ -82,7 +82,6 @@ var app = {
     app.header = document.createElement('header');
     app.header.textContent = "header";
     app.main = document.createElement('main');
-    app.main.textContent = "main";
     app.footer = document.createElement('footer');
     app.footer.textContent = "footer";
     document.body.appendChild(app.div);
@@ -91,8 +90,33 @@ var app = {
     app.div.appendChild(app.footer);
   },
 
+  /**
+   * "structure" sets up the architecture of the page (its skeleton). 
+  */
+  intro: function () {
+    // section
+    const section = document.createElement('section');
+    section.classList.add('intro');
+    section.id = 'intro';
+    // résumé
+    const resume = document.createElement('p');
+    const data_resume = data[0].intro[0];
+    resume.textContent = data_resume;
+    // portrait
+    const portrait_image = document.createElement('img');
+    portrait_image.id = 'portrait';
+    portrait_image.src = './images/martings-portrait.jpg';
+    portrait_image.alt = data[0].intro[1];
+
+    // appendChild
+    section.appendChild(resume);
+    section.appendChild(portrait_image);
+    app.main.appendChild(section);
+  },
+
   init: function () {
     app.structure();
+    app.intro();
   }
 
 };

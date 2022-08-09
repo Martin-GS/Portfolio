@@ -8,19 +8,23 @@ body {
 }
 
 header {
-  width: 100%;
   height: 50px;
   background-color: green;
 }
 
 main {
-  width: 100%;
-  height: 50px;
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
   background-color: red;
 }
 
 footer {
-  width: 100%;
   height: 50px;
   background-color: blue;
+}
+
+#intro {
+  background-color: rgb(51, 255, 0);
 }
