@@ -1,7 +1,7 @@
 {
   "name": "Martin GS • Portfolio",
   "short_name": "Martin GS",
-  "description": "Martin GS • Portfolio • Développeur Front-End",
+  "description": "Martin GS • Portfolio • Développeur Web spécialisé Front-End",
   "start_url": ".",
   "lang": "fr",
   "display": "standalone",
@@ -52,15 +52,6 @@
       "src": "images/martings-icon-512.png",
       "type": "image/png",
       "sizes": "512x512"
-    }
-  ],
-  "related_applications": [
-    {
-      "platform": "web"
-    },
-    {
-      "platform": "play",
-      "url": "https://play.google.com/store/apps/details?id=com.google.samples.apps.iosched"
     }
   ]
 }
