@@ -1,5 +1,42 @@
+/* ----- FONTS ----- */
+
+@font-face {
+  font-family: "Ubuntu Thin";
+  src: url(../assets/fonts/Ubuntu-Th.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Ubuntu Light";
+  src: url(../assets/fonts/Ubuntu-L.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Ubuntu Regular";
+  src: url(../assets/fonts/Ubuntu-R.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Ubuntu Bold";
+  src: url(../assets/fonts/Ubuntu-B.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Ubuntu Mono Regular";
+  src: url(../assets/fonts/UbuntuMono-R.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Ubuntu Mono Bold";
+  src: url(../assets/fonts/UbuntuMono-B.ttf) format("truetype");
+}
+
+/* ---------------------------- */
+/* ----- BODY & CONTAINER ----- */
+/* ---------------------------- */
+
 body {
   background-color: #2D3142;
+  font-family: "Ubuntu Regular", sans-serif;
 }
 
 #container {
@@ -7,24 +44,48 @@ body {
   height: 100%;
 }
 
+/* ---------------------------- */
+/* ---------- HEADER ---------- */
+/* ---------------------------- */
+
 header {
-  height: 50px;
   background-color: green;
 }
 
+/* ---------------------------- */
+/* ----------- MAIN ----------- */
+/* ---------------------------- */
+
 main {
-  margin: 20px;
-  padding: 20px;
+  margin: 10px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
-  background-color: red;
+  background-color: rgb(199, 24, 24);
 }
 
-footer {
-  height: 50px;
-  background-color: blue;
-}
+/* MAIN : intro subsection */
 
 #intro {
-  background-color: rgb(51, 255, 0);
+  background-color: rgb(58, 175, 29);
+}
+
+/* MAIN : social subsection */
+
+#social {
+  background-color: rgb(83, 196, 211);
+}
+
+/* MAIN : projects subsection */
+
+#projects {
+  background-color: rgb(165, 177, 1);
+}
+
+/* ---------------------------- */
+/* ---------- FOOTER ---------- */
+/* ---------------------------- */
+
+footer {
+  background-color: blue;
 }
