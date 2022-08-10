@@ -1,7 +1,7 @@
 let data = [
   {
     intro: [
-      resume = "Issu d'une école des Beaux-Arts et d'une formation en Développement Web (FullStack JavaScript, avec une spécialisation Front-End), je suis passionné depuis mon plus jeune âge par l'art et les nouvelles technologies ; ce qui m'a amené à me spécialiser dans le développement web et mobile, qui allie technicité, conception et intégration.",
+      resume = "<p>Issu d'une école des Beaux-Arts et d'une formation en Développement Web et Web Mobile FullStack JavaScript, je suis passionné depuis mon plus jeune âge par l'art et les nouvelles technologies, et tout particulièrement la conception de sites et d'applications, qui allie technicité, conception et intégration.",
       portrait = "./assets/images/martings-portrait.png"
     ]
   },
@@ -113,7 +113,7 @@ var app = {
     // résumé
     const resume = document.createElement('p');
     const data_resume = data[0].intro[0];
-    resume.textContent = data_resume;
+    resume.innerHTML = data_resume;
     // portrait
     const portrait_image = document.createElement('img');
     portrait_image.id = 'portrait';
@@ -150,6 +150,8 @@ var app = {
       // link
       const link_element = document.createElement('a');
       link_element.href = item.url;
+      link_element.target = "_blank";
+      link_element.rel = "noopener noreferrer";
       // image
       const image_element = document.createElement('img');
       image_element.id = `social-logo-${item.title}`;
