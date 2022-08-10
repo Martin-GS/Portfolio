@@ -5,7 +5,7 @@ const data = {
     title: "Martin GS",
     subtitle: "Développeur FullStack JavaScript spécialisé Front-End (React)",
     resume: "<p>Issu d'une école des <strong>Beaux-Arts</strong> et d'une formation en développement web et mobile (<strong>FullStack JavaScript</strong>), je suis passionné depuis mon plus jeune âge par l'art et les nouvelles technologies.</p><p>Alliant conception et technicité, j'ai découvert dans le développement <strong>Front-End</strong> une forme d'<i>artisanat</i> où, à partir d'une feuille blanche (ou plutôt un fichier vide), on peut créer une application <i>from scratch</i>.</p><p>J'ai suivi une spécialisation React qui m'a permis de découvrir également des frameworks comme Bootstrap, Bulma et Semantic-UI, le préprocesseur Sass et la syntaxe SCSS, etc.</p><p>En outre, ayant suivi une formation en développement web FullStack, et ayant participé à un projet en tant que Product Owner, j'ai la chance de connaître (et donc de comprendre) le développement <strong>Back-End</strong> (Node, Express, PostgreSQL, SQL, API, bases de données, etc).</p><p>Aujourd'hui je continue à apprendre, chaque jour, et cela me passionne. J'essaie de me tenir informé des nouvelles technologies, mais aussi acquérir de nouvelles compétences.</p>",
-    portrait: "./assets/images/martings-portrait.png"
+    portrait: "./assets/images/martings-portrait.jpg"
   },
   social: {
     text: "#Code #Développement #Web #FrontEnd #BackEnd #FullStack #JavaScript #React #Node #Tech #Travel #Sport",
@@ -79,10 +79,10 @@ const app = {
   */
   container: function () {
     // container
-    app.containerElement = document.createElement('div');
-    app.containerElement.id = 'container';
-    app.containerElement.classList = 'container';
-    document.body.appendChild(app.containerElement);
+    app.containerDiv = document.createElement('div');
+    app.containerDiv.id = 'container';
+    app.containerDiv.classList = 'container';
+    document.body.appendChild(app.containerDiv);
   },
 
   /**
@@ -91,10 +91,7 @@ const app = {
   header: function () {
     // container
     const headerElement = document.createElement('header');
-    headerElement.id = "header";
-    headerElement.classList = "header";
-    headerElement.textContent = "headerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr"
-    app.containerElement.appendChild(headerElement);
+    app.containerDiv.appendChild(headerElement);
   },
 
   /**
@@ -103,9 +100,7 @@ const app = {
   main: function () {
     // container
     app.mainElement = document.createElement('main');
-    app.mainElement.id = "main";
-    app.mainElement.classList = "main";
-    app.containerElement.appendChild(app.mainElement);
+    app.containerDiv.appendChild(app.mainElement);
   },
 
   /**
@@ -114,10 +109,95 @@ const app = {
   footer: function () {
     // container
     const footerElement = document.createElement('footer');
-    footerElement.id = "footer";
-    footerElement.classList = "footer";
-    footerElement.textContent = "footerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr";
-    app.containerElement.appendChild(footerElement);
+    const thisYear = new Date().getFullYear();
+    footerElement.textContent = `Martin GS • ${thisYear} • Tous droits réservés`;
+    app.containerDiv.appendChild(footerElement);
+  },
+
+  /**
+   * "résumé" : resume and portrait 
+  */
+  intro: function () {
+    // container
+    const introDiv = document.createElement('div');
+    introDiv.id = 'intro';
+    introDiv.classList = 'intro';
+    app.mainElement.appendChild(introDiv);
+    // résumé
+    const resumeDiv = document.createElement('div');
+    resumeDiv.id = "intro-resume";
+    resumeDiv.classList = "intro-resume";
+    const resumeData = data.intro.resume;
+    resumeDiv.innerHTML = resumeData;
+    introDiv.appendChild(resumeDiv);
+    // portrait
+    const portraitImage = document.createElement('img');
+    portraitImage.id = 'intro-portrait';
+    portraitImage.classList = 'intro-portrait';
+    portraitImage.src = data.intro.portrait;
+    portraitImage.alt = 'portrait Martin GS';
+    introDiv.appendChild(portraitImage);
+  },
+
+  /**
+   * "social": social network links
+  */
+  social: function () {
+    // container
+    const socialDiv = document.createElement('div');
+    socialDiv.id = 'social';
+    socialDiv.classList = 'social';
+    // title
+    const socialTitle = document.createElement('h3');
+    socialTitle.textContent = "Réseaux sociaux";
+    socialDiv.appendChild(socialTitle);
+    // hashtags
+    const hashtagsParagraph = document.createElement('p');
+    hashtagsParagraph.id = 'social-hashtags';
+    hashtagsParagraph.textContent = data.social.text;
+    socialDiv.appendChild(hashtagsParagraph);
+    // Image-links
+    const linksDiv = document.createElement('div');
+    linksDiv.id = 'social-links';
+    linksDiv.classList = 'social-links';
+    const socialData = data.social.socialnetworks;
+    socialData.forEach(item => {
+      // container
+      const socialDiv = document.createElement('div');
+      socialDiv.id = `social-links-card-${item.title}`;
+      socialDiv.classList = 'social-links-card';
+      // image
+      const socialLogo = document.createElement('img');
+      socialLogo.id = `social-links-card-logo-${item.title}`;
+      socialLogo.classList = 'social-links-card-logo';
+      socialLogo.src = item.image;
+      socialLogo.alt = `Lien ${item.title}`;
+      // link
+      const socialLink = document.createElement('a');
+      socialLink.href = item.url;
+      socialLink.target = "_blank";
+      socialLink.rel = "noopener noreferrer";
+      // append childs
+      socialDiv.appendChild(socialLink);
+      socialLink.appendChild(socialLogo);
+      linksDiv.appendChild(socialDiv);
+    });
+    // append childs
+    socialDiv.appendChild(linksDiv);
+    app.mainElement.appendChild(socialDiv);
+  },
+
+  /**
+   *  "projects" sets up the presentation of the projects and their links
+  */
+  projects: function () {
+    // container
+    const div = document.createElement('div');
+    div.classList.add('projects');
+    div.id = 'projects';
+    div.textContent = "Projets";
+    // append-childs
+    app.mainElement.appendChild(div);
   },
 
   init: function () {
@@ -125,6 +205,9 @@ const app = {
     app.header();
     app.main();
     app.footer();
+    app.intro();
+    app.social();
+    // app.projects();
   }
 
 };
