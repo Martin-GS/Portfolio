@@ -4,7 +4,7 @@ const data = {
   intro: {
     title: "Martin GS",
     subtitle: "Développeur FullStack JavaScript spécialisé Front-End (React)",
-    resume: "<p>Issu d'une école des <strong>Beaux-Arts</strong> et d'une formation en développement web et mobile (<strong>FullStack JavaScript</strong>), je suis passionné depuis mon plus jeune âge par l'art et les nouvelles technologies.</p><p>Alliant conception et technicité, j'ai découvert dans le développement <strong>Front-End</strong> une forme d'<i>artisanat</i> où, à partir d'une feuille blanche (ou plutôt un fichier vide), on peut créer une application <i>from scratch</i>.</p><p>J'ai suivi une spécialisation React qui m'a permis de découvrir également des frameworks comme Bootstrap, Bulma et Semantic-UI, le préprocesseur Sass et la syntaxe SCSS, etc.</p><p>En outre, ayant suivi une formation en développement web FullStack, et ayant participé à un projet en tant que Product Owner, j'ai la chance de connaître (et donc de comprendre) le développement <strong>Back-End</strong> (Node, Express, PostgreSQL, SQL, API, bases de données, etc).</p><p>Aujourd'hui je continue à apprendre, chaque jour, et cela me passionne. J'essaie de me tenir informé des nouvelles technologies, mais aussi acquérir de nouvelles compétences.</p>",
+    resume: "<p>Issu d'une école des <strong>Beaux-Arts</strong> et d'une formation en développement web et mobile (<strong>FullStack JavaScript</strong>), je suis passionné depuis mon plus jeune âge par l'art et les nouvelles technologies.</p><p>Alliant conception et technicité, j'ai découvert dans le développement <strong>Front-End</strong> une forme d'<i>artisanat</i> où, à partir d'une feuille blanche (ou plutôt un fichier vide), on peut créer une application <i>from scratch</i>.</p><p>La spécialisation Front-End m'a permis de découvrir, en plus de React et son écosystème, des frameworks comme Bootstrap, Bulma et Semantic-UI, le préprocesseur Sass et la syntaxe SCSS, etc.</p><p>En outre, ayant suivi une formation en développement web FullStack, et ayant participé à un projet en tant que Product Owner, j'ai la chance de connaître (et donc de comprendre) le développement <strong>Back-End</strong> (Node, Express, PostgreSQL, SQL, API, bases de données, etc).</p><p>Aujourd'hui je continue à apprendre, chaque jour, et cela me passionne. J'essaie de me tenir informé des nouvelles technologies, mais aussi acquérir de nouvelles compétences.</p>",
     portrait: "./assets/images/martings-portrait.jpg"
   },
   social: {
@@ -13,17 +13,20 @@ const data = {
       {
         title: "LinkedIn",
         url: "https://www.linkedin.com/in/martings",
-        image: "./assets/images/social-linkedin.png"
+        image: "./assets/images/social-linkedin.png",
+        hashtag: "#pro"
       },
       {
         title: "Twitter",
         url: "https://twitter.com/__martin_gs__",
-        image: "./assets/images/social-twitter.png"
+        image: "./assets/images/social-twitter.png",
+        hashtag: "#tech"
       },
       {
         title: "Instagram",
         url: "https://www.instagram.com/__martin.gs__",
-        image: "./assets/images/social-instagram.png"
+        image: "./assets/images/social-instagram.png",
+        hashtag: "#perso"
       }
     ]
   },
@@ -173,13 +176,19 @@ const app = {
       socialLogo.src = item.image;
       socialLogo.alt = `Lien ${item.title}`;
       // link
-      const socialLink = document.createElement('a');
-      socialLink.href = item.url;
-      socialLink.target = "_blank";
-      socialLink.rel = "noopener noreferrer";
+      const socialButton = document.createElement('a');
+      socialButton.href = item.url;
+      socialButton.target = "_blank";
+      socialButton.rel = "noopener noreferrer";
+      // hashtag
+      const hashtagSpan = document.createElement('span');
+      hashtagSpan.id = item.title;
+      hashtagSpan.className = `social-links-card-hashtag-${item.title}`;
+      hashtagSpan.textContent = item.hashtag;
       // append childs
-      socialDiv.appendChild(socialLink);
-      socialLink.appendChild(socialLogo);
+      socialDiv.appendChild(socialButton);
+      socialButton.appendChild(socialLogo);
+      socialDiv.appendChild(hashtagSpan);
       linksDiv.appendChild(socialDiv);
     });
     // append childs
@@ -196,7 +205,7 @@ const app = {
     div.classList.add('projects');
     div.id = 'projects';
     div.textContent = "Projets";
-    // append-childs
+    // append childs
     app.mainElement.appendChild(div);
   },
 
