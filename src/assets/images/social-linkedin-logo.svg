@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 83.333333 83.333333"
+   width="250"
+   height="250"
+   version="1.1"
+   id="svg26"
+   sodipodi:docname="social-linkedin-logo.svg"
+   inkscape:version="1.2.1 (ef4d3fba62, 2022-07-19, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs30" />
+  <sodipodi:namedview
+     id="namedview28"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     showgrid="false"
+     inkscape:zoom="5.4722222"
+     inkscape:cx="54.182741"
+     inkscape:cy="54.182741"
+     inkscape:window-width="1854"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg26" />
+  <g
+     id="g317"
+     transform="matrix(2.3148148,0,0,2.3148148,-13.888889,-13.888889)">
+    <path
+       fill="#0078d4"
+       d="m 42,37 c 0,2.762 -2.238,5 -5,5 H 11 C 8.239,42 6,39.762 6,37 V 11 C 6,8.238 8.239,6 11,6 h 26 c 2.762,0 5,2.238 5,5 z"
+       id="path18" />
+    <path
+       d="M 30,37 V 26.901 c 0,-1.689 -0.819,-2.698 -2.192,-2.698 -0.815,0 -1.414,0.459 -1.779,1.364 -0.017,0.064 -0.041,0.325 -0.031,1.114 L 26,37 H 19 V 18 h 7 v 1.061 C 27.022,18.356 28.275,18 29.738,18 c 4.547,0 7.261,3.093 7.261,8.274 L 37,37 Z M 11,37 V 18 h 3.457 C 12.454,18 11,16.528 11,14.499 11,12.472 12.478,11 14.514,11 16.526,11 17.959,12.431 18,14.479 18,16.523 16.521,18 14.485,18 H 18 v 19 z"
+       opacity="0.05"
+       id="path20" />
+    <path
+       d="m 30.5,36.5 v -9.599 c 0,-1.973 -1.031,-3.198 -2.692,-3.198 -1.295,0 -1.935,0.912 -2.243,1.677 -0.082,0.199 -0.071,0.989 -0.067,1.326 L 25.5,36.5 h -6 v -18 h 6 v 1.638 c 0.795,-0.823 2.075,-1.638 4.238,-1.638 4.233,0 6.761,2.906 6.761,7.774 L 36.5,36.5 Z m -19,0 v -18 h 6 v 18 z m 2.957,-19 c -1.713,0 -2.957,-1.262 -2.957,-3.001 0,-1.738 1.268,-2.999 3.014,-2.999 1.724,0 2.951,1.229 2.986,2.989 0,1.749 -1.268,3.011 -3.015,3.011 z"
+       opacity="0.07"
+       id="path22" />
+    <path
+       fill="#ffffff"
+       d="m 12,19 h 5 v 17 h -5 z m 2.485,-2 H 14.457 C 12.965,17 12,15.888 12,14.499 12,13.08 12.995,12 14.514,12 16.035,12 16.972,13.08 17,14.499 17,15.887 16.035,17 14.485,17 Z M 36,36 h -5 v -9.099 c 0,-2.198 -1.225,-3.698 -3.192,-3.698 -1.501,0 -2.313,1.012 -2.707,1.99 C 24.957,25.543 25,26.511 25,27 v 9 H 20 V 19 h 5 v 2.616 C 25.721,20.5 26.85,19 29.738,19 c 3.578,0 6.261,2.25 6.261,7.274 z"
+       id="path24" />
+  </g>
+</svg>

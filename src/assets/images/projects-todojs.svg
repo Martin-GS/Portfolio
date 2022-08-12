@@ -2,13 +2,13 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="12.7mm"
-   height="12.7mm"
-   viewBox="0 0 12.7 12.7"
+   width="66.145836mm"
+   height="66.145836mm"
+   viewBox="0 0 66.145837 66.145837"
    version="1.1"
    id="svg5"
-   inkscape:version="1.2 (56b05e47e7, 2022-06-09, custom)"
-   sodipodi:docname="todolist.svg"
+   inkscape:version="1.2.1 (ef4d3fba62, 2022-07-19, custom)"
+   sodipodi:docname="projects-todojs.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -27,9 +27,9 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:zoom="12.030078"
-     inkscape:cx="21.654057"
-     inkscape:cy="24.230931"
+     inkscape:zoom="1.5037598"
+     inkscape:cx="-76.807482"
+     inkscape:cy="152.61746"
      inkscape:window-width="1854"
      inkscape:window-height="1016"
      inkscape:window-x="0"
@@ -44,56 +44,60 @@
      inkscape:label="Calque 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(27.932495,-74.545402)">
+     transform="translate(27.932494,-74.545396)">
     <g
-       id="g1818"
-       transform="matrix(0.23999999,0,0,0.23999999,-21.228696,56.654506)">
-      <rect
-         style="fill:#ffcc00;stroke-width:0.158061"
-         id="rect31"
-         width="52.916668"
-         height="52.916668"
-         x="-27.932495"
-         y="74.545403"
-         ry="9.5397596" />
-      <rect
-         style="fill:#ffffff;stroke-width:0.144391"
-         id="rect31-3"
-         width="48.34024"
-         height="48.34024"
-         x="-25.644281"
-         y="76.833611"
-         ry="8.7147264" />
-      <rect
-         style="fill:#ffcc00;stroke-width:0.129184"
-         id="rect31-6"
-         width="43.248943"
-         height="43.248943"
-         x="-23.098635"
-         y="79.379265"
-         ry="7.7968726" />
+       id="g997"
+       transform="matrix(5.2083334,0,0,5.2083334,117.54925,-313.71191)">
       <g
-         id="g823"
-         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
-         transform="matrix(1.3471462,0,0,1.2402092,92.611504,-52.944633)">
+         id="g1818"
+         transform="matrix(0.23999999,0,0,0.23999999,-21.228696,56.654506)">
         <rect
-           style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
-           id="rect31-6-7"
-           width="35.435802"
-           height="4.3994279"
-           x="-157.99763"
-           y="3.0447915"
-           ry="2.1997139"
-           transform="rotate(-60)" />
+           style="fill:#ffcc00;stroke-width:0.158061"
+           id="rect31"
+           width="52.916668"
+           height="52.916668"
+           x="-27.932495"
+           y="74.545403"
+           ry="9.5397596" />
         <rect
+           style="fill:#ffffff;stroke-width:0.144391"
+           id="rect31-3"
+           width="48.34024"
+           height="48.34024"
+           x="-25.644281"
+           y="76.833611"
+           ry="8.7147264" />
+        <rect
+           style="fill:#ffcc00;stroke-width:0.129184"
+           id="rect31-6"
+           width="43.248943"
+           height="43.248943"
+           x="-23.098635"
+           y="79.379265"
+           ry="7.7968726" />
+        <g
+           id="g823"
            style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
-           id="rect31-6-7-5"
-           width="21.410082"
-           height="4.3994279"
-           x="63.227982"
-           y="130.10986"
-           ry="2.1997139"
-           transform="rotate(60)" />
+           transform="matrix(1.3471462,0,0,1.2402092,92.611504,-52.944633)">
+          <rect
+             style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
+             id="rect31-6-7"
+             width="35.435802"
+             height="4.3994279"
+             x="-157.99763"
+             y="3.0447915"
+             ry="2.1997139"
+             transform="rotate(-60)" />
+          <rect
+             style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
+             id="rect31-6-7-5"
+             width="21.410082"
+             height="4.3994279"
+             x="63.227982"
+             y="130.10986"
+             ry="2.1997139"
+             transform="rotate(60)" />
+        </g>
       </g>
     </g>
   </g>

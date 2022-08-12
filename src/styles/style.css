@@ -48,16 +48,13 @@ body {
 
 /* ---------- HEADER ---------- */
 
-header {
-  background-color: red;
-}
+header {}
 
 /* ---------- MAIN ---------- */
 
 main {
   display: flex;
   flex-direction: column;
-  background-color: green;
 }
 
 /* MAIN : intro subsection */
@@ -81,6 +78,4 @@ main {
 
 /* ---------- FOOTER ---------- */
 
-footer {
-  background-color: #303342;
-}
+footer {}

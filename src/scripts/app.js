@@ -60,14 +60,14 @@ const app = {
     nameH1.innerHTML = nameData;
     introDiv.appendChild(nameH1);
     // span : position
-    const positionSpan = document.createElement('span');
+    const positionSpan = document.createElement('h2');
     positionSpan.id = "intro-position";
     positionSpan.classList = "intro-position";
     const positionData = data.intro.position;
     positionSpan.innerHTML = positionData;
     introDiv.appendChild(positionSpan);
     // span : specialization
-    const speSpan = document.createElement('span');
+    const speSpan = document.createElement('h3');
     speSpan.id = "intro-spe";
     speSpan.classList = "intro-spe";
     const speData = data.intro.specialization;
@@ -121,11 +121,9 @@ const app = {
     socialData.forEach(item => {
       // container
       const socialDiv = document.createElement('div');
-      socialDiv.id = `social-links-card-${item.title}`;
       socialDiv.classList = 'social-links-card';
       // image
       const socialLogo = document.createElement('img');
-      socialLogo.id = `social-links-card-logo-${item.title}`;
       socialLogo.classList = 'social-links-card-logo';
       socialLogo.src = item.image;
       socialLogo.alt = `Lien ${item.title}`;
@@ -158,8 +156,58 @@ const app = {
     const projectsDiv = document.createElement('div');
     projectsDiv.classList.add('projects');
     projectsDiv.id = 'projects';
-    projectsDiv.textContent = "Projets";
     app.mainElement.appendChild(projectsDiv);
+    // title
+    const projectsTitle = document.createElement('h3');
+    projectsTitle.textContent = "Projets personnels";
+    projectsDiv.appendChild(projectsTitle);
+    // description
+    const projectsDescription = document.createElement('p');
+    projectsDescription.textContent = "Voici une liste (non exhaustive) de mes projets personnels, leurs descriptions et leurs liens respectifs";
+    projectsDiv.appendChild(projectsDescription);
+    // cards
+    const projectsData = data.projects;
+    projectsData.forEach(item => {
+      // card-div
+      const cardDiv = document.createElement('div');
+      cardDiv.classList = 'projects-card';
+      projectsDiv.appendChild(cardDiv);
+      // logo
+      const cardLogo = document.createElement('img');
+      cardLogo.classList = 'projects-card-logo';
+      cardLogo.src = item.image;
+      cardLogo.alt = `Logo ${item.title}`;
+      cardDiv.appendChild(cardLogo);
+      // title
+      const cardTitle = document.createElement('h4');
+      cardTitle.classList = 'projects-card-title';
+      cardTitle.textContent = item.title;
+      cardDiv.appendChild(cardTitle);
+      // description
+      const cardDescription = document.createElement('p');
+      cardDescription.classList = 'projects-card-description';
+      cardDescription.textContent = item.description;
+      cardDiv.appendChild(cardDescription);
+      // website's link : external link icon
+      // const cardLink = document.createElement('a');
+      // cardLink.classList = 'projects-card-link--anchor';
+      // cardLink.href = item.url;
+      // cardLink.target = "_blank";
+      // cardLink.rel = "noopener noreferrer";
+      // const externalLinkImage = document.createElement('img');
+      // externalLinkImage.classList = 'projects-card-link--icon';
+      // externalLinkImage.src = './assets/images/projects-link-externallink.svg';
+      // externalLinkImage.alt = `lien vers ${item.url}. Icône de lien externe`;
+      // cardLink.textContent = externalLinkImage;
+      // cardDiv.appendChild(cardLink);
+      // repositorie's link
+      // text
+      // image
+
+
+
+
+    });
   },
 
   init: function () {
@@ -169,7 +217,7 @@ const app = {
     app.footer();
     app.intro();
     app.social();
-    // app.projects();
+    app.projects();
   }
 
 };

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="250.15387"
+   height="249.82997"
+   viewBox="0 0 250.15387 249.82998"
+   fill="none"
+   stroke="currentColor"
+   stroke-width="2"
+   stroke-linecap="round"
+   stroke-linejoin="round"
+   class="feather feather-external-link"
+   version="1.1"
+   id="svg10536"
+   sodipodi:docname="projets-externallink.svg"
+   inkscape:version="1.2.1 (ef4d3fba62, 2022-07-19, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs10540" />
+  <sodipodi:namedview
+     id="namedview10538"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     showgrid="false"
+     inkscape:zoom="1.0260417"
+     inkscape:cx="-170.07106"
+     inkscape:cy="171.04568"
+     inkscape:window-width="1854"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg10536" />
+  <g
+     id="g1159"
+     transform="matrix(0.99948241,0,0,0.98796306,-2.3091636,1.9410655)"
+     style="stroke:#f5f5f5;stroke-opacity:1">
+    <g
+       id="g11034"
+       style="stroke:#f5f5f5;stroke-opacity:1"
+       transform="matrix(12.513698,0,0,12.652773,-22.712306,-27.275042)">
+      <g
+         id="g11027"
+         style="stroke:#f5f5f5;stroke-opacity:1">
+        <polyline
+           points="15 3 21 3 21 9"
+           id="polyline10532"
+           style="stroke:#f5f5f5;stroke-opacity:1" />
+      </g>
+      <g
+         id="g10661"
+         style="stroke:#f5f5f5;stroke-opacity:1">
+        <path
+           d="m 18,13 v 6 a 2,2 0 0 1 -2,2 H 5 A 2,2 0 0 1 3,19 V 8 A 2,2 0 0 1 5,6 h 6"
+           id="path10530"
+           style="stroke:#f5f5f5;stroke-opacity:1" />
+        <line
+           x1="10"
+           y1="14"
+           x2="21"
+           y2="3"
+           id="line10534"
+           style="stroke:#f5f5f5;stroke-opacity:1" />
+      </g>
+    </g>
+  </g>
+</svg>
