@@ -151,7 +151,7 @@ const app = {
   },
 
   /**
-   *  "projects" : card-presentation of projects and links
+   *  "projects" : cards-presentation of projects and links
   */
   projects: function () {
     // container
@@ -160,9 +160,6 @@ const app = {
     projectsDiv.id = 'projects';
     projectsDiv.textContent = "Projets";
     app.mainElement.appendChild(projectsDiv);
-    // cards
-    const projectsData = data.projects;
-    console.log(projectsData);
   },
 
   init: function () {
