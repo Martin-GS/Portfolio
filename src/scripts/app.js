@@ -2,8 +2,10 @@
 
 const data = {
   intro: {
-    title: "Martin GS",
-    subtitle: "Développeur FullStack JavaScript spécialisé Front-End (React)",
+    name: "Martin GS",
+    position: "Développeur FullStack JavaScript",
+    specialization: "Passionné par le Front-End et spécialisé React.js",
+    location: "Hyères, Côte d'Azur, France",
     resume: "<p>Issu d'une école des <strong>Beaux-Arts</strong> et d'une formation en développement web et mobile (<strong>FullStack JavaScript</strong>), je suis passionné depuis mon plus jeune âge par l'art et les nouvelles technologies.</p><p>Alliant conception et technicité, j'ai découvert dans le développement <strong>Front-End</strong> une forme d'<i>artisanat</i> où, à partir d'une feuille blanche (ou plutôt un fichier vide), on peut créer une application <i>from scratch</i>.</p><p>La spécialisation Front-End m'a permis de découvrir, en plus de React et son écosystème, des frameworks comme Bootstrap, Bulma et Semantic-UI, le préprocesseur Sass et la syntaxe SCSS, etc.</p><p>En outre, ayant suivi une formation en développement web FullStack, et ayant participé à un projet en tant que Product Owner, j'ai la chance de connaître (et donc de comprendre) le développement <strong>Back-End</strong> (Node, Express, PostgreSQL, SQL, API, bases de données, etc).</p><p>Aujourd'hui je continue à apprendre, chaque jour, et cela me passionne. J'essaie de me tenir informé des nouvelles technologies, mais aussi acquérir de nouvelles compétences.</p>",
     portrait: "./assets/images/martings-portrait.jpg"
   },
@@ -126,6 +128,35 @@ const app = {
     introDiv.id = 'intro';
     introDiv.classList = 'intro';
     app.mainElement.appendChild(introDiv);
+
+    // h1 : name: "Martin GS",
+    const nameH1 = document.createElement('h1');
+    nameH1.id = "intro-name";
+    nameH1.classList = "intro-name";
+    const nameData = data.intro.name;
+    nameH1.innerHTML = nameData;
+    introDiv.appendChild(nameH1);
+    // span : position
+    const positionSpan = document.createElement('span');
+    positionSpan.id = "intro-position";
+    positionSpan.classList = "intro-position";
+    const positionData = data.intro.position;
+    positionSpan.innerHTML = positionData;
+    introDiv.appendChild(positionSpan);
+    // span : specialization
+    const speSpan = document.createElement('span');
+    speSpan.id = "intro-spe";
+    speSpan.classList = "intro-spe";
+    const speData = data.intro.specialization;
+    speSpan.innerHTML = speData;
+    introDiv.appendChild(speSpan);
+    // span : location
+    const locationSpan = document.createElement('span');
+    locationSpan.id = "intro-location";
+    locationSpan.classList = "intro-location";
+    const locationData = data.intro.location;
+    locationSpan.innerHTML = locationData;
+    introDiv.appendChild(locationSpan);
     // résumé
     const resumeDiv = document.createElement('div');
     resumeDiv.id = "intro-resume";
