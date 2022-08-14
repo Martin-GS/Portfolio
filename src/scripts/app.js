@@ -188,25 +188,20 @@ const app = {
       cardDescription.classList = 'projects-card-description';
       cardDescription.textContent = item.description;
       cardDiv.appendChild(cardDescription);
-      // website's link : external link icon
-      // const cardLink = document.createElement('a');
-      // cardLink.classList = 'projects-card-link--anchor';
-      // cardLink.href = item.url;
-      // cardLink.target = "_blank";
-      // cardLink.rel = "noopener noreferrer";
-      // const externalLinkImage = document.createElement('img');
-      // externalLinkImage.classList = 'projects-card-link--icon';
-      // externalLinkImage.src = './assets/images/projects-link-externallink.svg';
-      // externalLinkImage.alt = `lien vers ${item.url}. Icône de lien externe`;
-      // cardLink.textContent = externalLinkImage;
-      // cardDiv.appendChild(cardLink);
-      // repositorie's link
-      // text
-      // image
-
-
-
-
+      // link to website
+      const linkWebsite = document.createElement('a');
+      linkWebsite.classList = 'projects-card-linkwebsite--anchor';
+      linkWebsite.href = item.url_website;
+      linkWebsite.target = "_blank";
+      linkWebsite.rel = "noopener noreferrer";
+      linkWebsite.alt = "Icône de lien externe";
+      const linkWebsiteImage = document.createElement('img');
+      linkWebsiteImage.classList = 'projects-card-linkwebsite--image';
+      linkWebsiteImage.src = "assets/images/projects-link-externallink.svg";
+      linkWebsiteImage.alt = `Icône de lien externe`;
+      linkWebsite.textContent = linkWebsiteImage;
+      cardDiv.appendChild(linkWebsite);
+      // link to repository
     });
   },
 
