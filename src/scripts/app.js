@@ -186,22 +186,37 @@ const app = {
       // description
       const cardDescription = document.createElement('p');
       cardDescription.classList = 'projects-card-description';
-      cardDescription.textContent = item.description;
+      cardDescription.innerHTML = `<strong>Description</strong> :<br /> <q> ${item.description} </q>`;
       cardDiv.appendChild(cardDescription);
+      // technos
+      const cardTechnos = document.createElement('p');
+      cardTechnos.classList = 'projects-card-description';
+      cardTechnos.innerHTML = `<strong>Technos</strong> :<br /> ${item.technos}`;
+      cardDiv.appendChild(cardTechnos);
       // link to website
       const linkWebsite = document.createElement('a');
       linkWebsite.classList = 'projects-card-linkwebsite--anchor';
       linkWebsite.href = item.url_website;
       linkWebsite.target = "_blank";
       linkWebsite.rel = "noopener noreferrer";
-      linkWebsite.alt = "Icône de lien externe";
       const linkWebsiteImage = document.createElement('img');
       linkWebsiteImage.classList = 'projects-card-linkwebsite--image';
-      linkWebsiteImage.src = "assets/images/projects-link-externallink.svg";
-      linkWebsiteImage.alt = `Icône de lien externe`;
-      linkWebsite.textContent = linkWebsiteImage;
+      linkWebsiteImage.src = item.externallink_icon;
+      linkWebsiteImage.alt = `Icône et lien vers le site ${item.title}`;
+      linkWebsite.appendChild(linkWebsiteImage);
       cardDiv.appendChild(linkWebsite);
       // link to repository
+      const linkRepository = document.createElement('a');
+      linkRepository.classList = 'projects-card-linkrepository--anchor';
+      linkRepository.href = item.url_repository;
+      linkRepository.target = "_blank";
+      linkRepository.rel = "noopener noreferrer";
+      const linkRepositoryImage = document.createElement('img');
+      linkRepositoryImage.classList = 'projects-card-linkrepository--image';
+      linkRepositoryImage.src = item.github_icon;
+      linkRepositoryImage.alt = `Icône et lien vers le répertoire GitHub du projet ${item.title}`;
+      linkRepository.appendChild(linkRepositoryImage);
+      cardDiv.appendChild(linkRepository);
     });
   },
 

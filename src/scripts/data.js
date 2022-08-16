@@ -39,19 +39,23 @@ const data = {
       title: "Portfolio",
       description: `Mon portfolio, développé "from scratch" en JavaScript`,
       image: "./assets/images/projects-portfolio.svg",
-      technos: "HTML, CSS, JavaScript",
+      technos: "Vanilla JavaScript",
       status: "v1 finalisée et déployée",
       url_website: "https://martin.gs/",
-      url_repository: "https://github.com/Martin-GS/Portfolio"
+      url_repository: "https://github.com/Martin-GS/Portfolio",
+      externallink_icon: "./assets/images/projects-link-externallink.svg",
+      github_icon: "./assets/images/projects-link-github.svg"
     },
     {
       title: "ToDo.js",
       description: "ToDo-list codée en JavaScript.",
       image: "./assets/images/projects-todojs.svg",
-      technos: "HTML, CSS, JavaScript",
+      technos: "Vanilla JavaScript",
       status: "v1 finalisée et déployée",
       url_website: "https://todo.martin.gs",
-      url_repository: "https://github.com/Martin-GS/ToDo.js"
+      url_repository: "https://github.com/Martin-GS/ToDo.js",
+      externallink_icon: "./assets/images/projects-link-externallink.svg",
+      github_icon: "./assets/images/projects-link-github.svg"
     },
     {
       title: "WishList",
@@ -60,16 +64,20 @@ const data = {
       technos: "HTML, CSS, JavaScript, React, Bootstrap, Sass/SCSS, Axios, etc",
       status: "v3 finalisée et déployée",
       url_website: "https://wishlist.martin.gs",
-      url_repository: "https://github.com/Martin-GS/WishList"
+      url_repository: "https://github.com/Martin-GS/WishList",
+      externallink_icon: "./assets/images/projects-link-externallink.svg",
+      github_icon: "./assets/images/projects-link-github.svg"
     },
     {
       title: "inicio",
-      description: "Page d'accueil personnalisable pour navigateur web. Back développé avec Strapi, Front développé en React/Redux.",
+      description: "Page d'accueil personnalisable pour navigateur web.",
       image: "./assets/images/projects-inicio.svg",
       technos: "HTML, CSS, JavaScript, React, Redux, Sass/SCSS, Axios, Strapi, etc.",
       status: "en cours de développement",
       url_website: "https://inicio.martin.gs",
-      url_repository: "https://github.com/Martin-GS/inicio"
+      url_repository: "https://github.com/Martin-GS/inicio",
+      externallink_icon: "./assets/images/projects-link-externallink.svg",
+      github_icon: "./assets/images/projects-link-github.svg"
     },
     {
       title: "DevStack",
@@ -78,9 +86,24 @@ const data = {
       technos: "HTML, CSS, JavaScript",
       status: "v1 finalisée et déployée",
       url_website: "https://devstack.martin.gs",
-      url_repository: "https://github.com/Martin-GS/DevStack"
+      url_repository: "https://github.com/Martin-GS/DevStack",
+      externallink_icon: "./assets/images/projects-link-externallink.svg",
+      github_icon: "./assets/images/projects-link-github.svg"
     }
-  ]
+  ],
+  technos: {
+    html: "./assets/images/logo-html.svg",
+    css: "./assets/images/logo-css.svg",
+    javascript: "./assets/images/logo-javascript.svg",
+    json: "./assets/images/logo-json.svg",
+    react: "./assets/images/logo-react.svg",
+    reactrouter: "./assets/images/logo-redux.svg",
+    reactrouter: "./assets/images/logo-react-router.svg",
+    node: "./assets/images/logo-node.svg",
+    node: "./assets/images/logo-strapi.svg",
+    bootstrap: "./assets/images/logo-bootstrap.svg",
+    node: "./assets/images/logo-sass.svg"
+  }
 };
 
 export default data; 
