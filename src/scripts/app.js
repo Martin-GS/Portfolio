@@ -17,9 +17,11 @@ const app = {
    * Header of the page 
   */
   header: function () {
+
     // container
     const headerElement = document.createElement('header');
     app.containerDiv.appendChild(headerElement);
+
     // brand
     const brandContainer = document.createElement('div');
     brandContainer.id = 'header-brand-container';
@@ -27,49 +29,51 @@ const app = {
     const brand = document.createElement('h1');
     brand.textContent = 'Martin GS';
     brandContainer.appendChild(brand);
+
     // navbar
     const navbarContainer = document.createElement('div');
     navbarContainer.id = 'header-navbar-container';
     headerElement.appendChild(navbarContainer);
 
-    // résumé link text
-    const resumeLink = document.createElement('a');
-    resumeLink.classList = 'header-navbar-link';
-    resumeLink.href = '#intro';
-    resumeLink.textContent = 'Résumé';
-    navbarContainer.appendChild(resumeLink);
-    // résumé link icon
+    // résumé link and icon
+    const resumeContainer = document.createElement('div');
     const resumeIcon = document.createElement('img');
     resumeIcon.classList = 'header-navbar-icon';
     const resumeIconData = data.header.resumeicon;
     resumeIcon.src = resumeIconData;
-    navbarContainer.appendChild(resumeIcon);
-
-    // social link text
-    const socialLink = document.createElement('a');
-    socialLink.classList = 'header-navbar-link';
-    socialLink.href = '#social';
-    socialLink.textContent = 'Réseaux Sociaux';
-    navbarContainer.appendChild(socialLink);
-    // social link icon
+    resumeContainer.appendChild(resumeIcon);
+    const resumeLink = document.createElement('a');
+    resumeLink.classList = 'header-navbar-link';
+    resumeLink.href = '#intro';
+    resumeLink.textContent = 'Résumé';
+    resumeContainer.appendChild(resumeLink);
+    navbarContainer.appendChild(resumeContainer);
+    // social link and icon
+    const socialContainer = document.createElement('div');
     const socialIcon = document.createElement('img');
     socialIcon.classList = 'header-navbar-icon';
     const socialIconData = data.header.socialicon;
     socialIcon.src = socialIconData;
-    navbarContainer.appendChild(socialIcon);
-
-    // project link text
-    const projectLink = document.createElement('a');
-    projectLink.classList = 'header-navbar-link';
-    projectLink.href = '#project';
-    projectLink.textContent = 'project';
-    navbarContainer.appendChild(projectLink);
-    // project link icon
+    socialContainer.appendChild(socialIcon);
+    const socialLink = document.createElement('a');
+    socialLink.classList = 'header-navbar-link';
+    socialLink.href = '#social';
+    socialLink.textContent = 'Réseaux Sociaux';
+    socialContainer.appendChild(socialLink);
+    navbarContainer.appendChild(socialContainer);
+    // projects link and icon
+    const projectsContainer = document.createElement('div');
     const projectIcon = document.createElement('img');
     projectIcon.classList = 'header-navbar-icon';
     const projectIconData = data.header.projecticon;
     projectIcon.src = projectIconData;
-    navbarContainer.appendChild(projectIcon);
+    projectsContainer.appendChild(projectIcon);
+    const projectLink = document.createElement('a');
+    projectLink.classList = 'header-navbar-link';
+    projectLink.href = '#projects';
+    projectLink.textContent = 'Projets';
+    projectsContainer.appendChild(projectLink);
+    navbarContainer.appendChild(projectsContainer);
 
   },
 
