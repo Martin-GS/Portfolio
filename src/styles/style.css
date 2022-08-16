@@ -1,4 +1,4 @@
-/* ---------- FONTS ---------- */
+/* ---------- IMPORT FONTS ---------- */
 
 @font-face {
   font-family: "Sans Thin";
@@ -35,25 +35,93 @@
   src: url(../assets/fonts/FiraMono-Medium.ttf) format("truetype");
 }
 
-/* ---------- GENERAL ---------- */
+/* ---------- BODY & CONTAINER ---------- */
 
 body {
-  background-color: #212431;
+  background-color: #0D1017;
   font-family: "Sans Light", sans-serif;
   color: #f5f5f5;
 }
 
-/* ---------- CONTAINER ---------- */
-
 #container {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 
+/* ---------- TXT ---------- */
+
+h1 {
+  font-family: 'Mono Regular', monospace;
+  font-size: 1.5em;
+}
+
+h2 {
+  font-family: 'Mono Regular', monospace;
+  font-size: 2.5em;
+}
+
+h3 {
+  font-family: 'Mono Regular', monospace;
+  font-size: 2em;
+}
+
+h4 {
+  font-family: 'Mono Regular', monospace;
+  font-size: 1.75em;
+}
+
+h5 {
+  font-family: 'Mono Regular', monospace;
+  font-size: 1.5em;
+}
+
+p {
+  margin: 0.7em 0;
+  font-size: 1.2em;
+  line-height: 1.3em;
+}
+
+a {
+  font-family: "Sans Regular", sans-serif;
+  color: #39BAE6;
+  text-decoration: none;
+}
+
+a:hover {
+  font-family: "Sans Medium", sans-serif;
+  color: #fafafa;
+  text-decoration: none;
 }
 
 /* ---------- HEADER ---------- */
 
-header {}
+header {
+  z-index: 2;
+  width: 100%;
+  height: 40px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #131721;
+}
+
+#header-brand-container {
+  background-color: rgb(0, 255, 76);
+}
+
+#header-navbar-container {
+  background-color: rgb(255, 0, 0);
+}
+
+.header-navbar-link {
+  padding-left: 30px;
+}
 
 /* ---------- MAIN ---------- */
 
@@ -66,21 +134,39 @@ main {
 
 /* background: linear-gradient(180deg, #2D3142, #4f5364, #2D3142); */
 
-/* #intro {
+#intro {
   height: 100vh;
-  background-color: rgb(0, 99, 86);
-} */
+  /* background: linear-gradient(180deg, #0D1017, #25272e, #0D1017); */
+}
 
-/* #social {
-  height: 100vh;
-  background-color: rgb(0, 58, 97);
-} */
+#intro-location-icon {
+  display: inline-block;
+  height: 16px;
+  width: auto;
+  margin-right: 7px;
+}
 
-/* #projects {
+#intro-location-span {
+  font-family: 'Mono Regular', monospace;
+  font-size: 1.4em;
+}
+
+#social {
   height: 100vh;
-  background-color: rgb(54, 58, 0);
-} */
+  /* background: linear-gradient(180deg, #0D1017, #39BAE6, #AAD94C); */
+}
+
+#projects {
+  height: 100vh;
+  /* background: linear-gradient(180deg, #0D1017, #AAD94C, #FFB454); */
+}
 
 /* ---------- FOOTER ---------- */
 
-footer {}
+footer {
+  width: 100%;
+  height: 40px;
+  padding-top: 20px;
+  text-align: center;
+  background-color: violet;
+}

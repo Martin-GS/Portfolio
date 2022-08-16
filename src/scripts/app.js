@@ -20,6 +20,57 @@ const app = {
     // container
     const headerElement = document.createElement('header');
     app.containerDiv.appendChild(headerElement);
+    // brand
+    const brandContainer = document.createElement('div');
+    brandContainer.id = 'header-brand-container';
+    headerElement.appendChild(brandContainer);
+    const brand = document.createElement('h1');
+    brand.textContent = 'Martin GS';
+    brandContainer.appendChild(brand);
+    // navbar
+    const navbarContainer = document.createElement('div');
+    navbarContainer.id = 'header-navbar-container';
+    headerElement.appendChild(navbarContainer);
+
+    // résumé link text
+    const resumeLink = document.createElement('a');
+    resumeLink.classList = 'header-navbar-link';
+    resumeLink.href = '#intro';
+    resumeLink.textContent = 'Résumé';
+    navbarContainer.appendChild(resumeLink);
+    // résumé link icon
+    const resumeIcon = document.createElement('img');
+    resumeIcon.classList = 'header-navbar-icon';
+    const resumeIconData = data.header.resumeicon;
+    resumeIcon.src = resumeIconData;
+    navbarContainer.appendChild(resumeIcon);
+
+    // social link text
+    const socialLink = document.createElement('a');
+    socialLink.classList = 'header-navbar-link';
+    socialLink.href = '#social';
+    socialLink.textContent = 'Réseaux Sociaux';
+    navbarContainer.appendChild(socialLink);
+    // social link icon
+    const socialIcon = document.createElement('img');
+    socialIcon.classList = 'header-navbar-icon';
+    const socialIconData = data.header.socialicon;
+    socialIcon.src = socialIconData;
+    navbarContainer.appendChild(socialIcon);
+
+    // project link text
+    const projectLink = document.createElement('a');
+    projectLink.classList = 'header-navbar-link';
+    projectLink.href = '#project';
+    projectLink.textContent = 'project';
+    navbarContainer.appendChild(projectLink);
+    // project link icon
+    const projectIcon = document.createElement('img');
+    projectIcon.classList = 'header-navbar-icon';
+    const projectIconData = data.header.projecticon;
+    projectIcon.src = projectIconData;
+    navbarContainer.appendChild(projectIcon);
+
   },
 
   /**
@@ -51,32 +102,36 @@ const app = {
     introDiv.id = 'intro';
     introDiv.classList = 'intro';
     app.mainElement.appendChild(introDiv);
-
-    // h1 : name: "Martin GS",
-    const nameH1 = document.createElement('h1');
-    nameH1.id = "intro-name";
-    nameH1.classList = "intro-name";
+    // h2 : name: "Martin GS",
+    const nameH2 = document.createElement('h2');
+    nameH2.id = "intro-name";
+    nameH2.classList = "intro-name";
     const nameData = data.intro.name;
-    nameH1.innerHTML = nameData;
-    introDiv.appendChild(nameH1);
+    nameH2.innerHTML = nameData;
+    introDiv.appendChild(nameH2);
     // span : position
-    const positionSpan = document.createElement('h2');
+    const positionSpan = document.createElement('h3');
     positionSpan.id = "intro-position";
     positionSpan.classList = "intro-position";
     const positionData = data.intro.position;
     positionSpan.innerHTML = positionData;
     introDiv.appendChild(positionSpan);
     // span : specialization
-    const speSpan = document.createElement('h3');
+    const speSpan = document.createElement('h4');
     speSpan.id = "intro-spe";
     speSpan.classList = "intro-spe";
     const speData = data.intro.specialization;
     speSpan.innerHTML = speData;
     introDiv.appendChild(speSpan);
-    // span : location
+    // location icon
+    const locationIcon = document.createElement('img');
+    locationIcon.id = "intro-location-icon";
+    const locationIconData = data.intro.locationicon;
+    locationIcon.src = locationIconData;
+    introDiv.appendChild(locationIcon);
+    // location span
     const locationSpan = document.createElement('span');
-    locationSpan.id = "intro-location";
-    locationSpan.classList = "intro-location";
+    locationSpan.id = "intro-location-span";
     const locationData = data.intro.location;
     locationSpan.innerHTML = locationData;
     introDiv.appendChild(locationSpan);
@@ -105,7 +160,7 @@ const app = {
     socialDiv.id = 'social';
     socialDiv.classList = 'social';
     // title
-    const socialTitle = document.createElement('h3');
+    const socialTitle = document.createElement('h4');
     socialTitle.textContent = "Réseaux sociaux";
     socialDiv.appendChild(socialTitle);
     // hashtags
@@ -158,7 +213,7 @@ const app = {
     projectsDiv.id = 'projects';
     app.mainElement.appendChild(projectsDiv);
     // title
-    const projectsTitle = document.createElement('h3');
+    const projectsTitle = document.createElement('h4');
     projectsTitle.textContent = "Projets personnels";
     projectsDiv.appendChild(projectsTitle);
     // description
@@ -179,7 +234,7 @@ const app = {
       cardLogo.alt = `Logo ${item.title}`;
       cardDiv.appendChild(cardLogo);
       // title
-      const cardTitle = document.createElement('h4');
+      const cardTitle = document.createElement('h5');
       cardTitle.classList = 'projects-card-title';
       cardTitle.textContent = item.title;
       cardDiv.appendChild(cardTitle);
