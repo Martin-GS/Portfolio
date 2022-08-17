@@ -16,11 +16,9 @@ const app = {
   },
 
   header: function () {
-
     // container
     const headerElement = document.createElement('header');
     app.containerDiv.appendChild(headerElement);
-
     // brand
     const brandContainer = document.createElement('div');
     brandContainer.id = 'header-brand-container';
@@ -28,12 +26,10 @@ const app = {
     const brand = document.createElement('h1');
     brand.textContent = 'Martin GS';
     brandContainer.appendChild(brand);
-
     // navbar
     const navbarContainer = document.createElement('div');
     navbarContainer.id = 'header-navbar-container';
     headerElement.appendChild(navbarContainer);
-
     // item : résumé
     const resumeDiv = document.createElement('div');
     resumeDiv.classList = 'header-navbar-item-div';
@@ -45,10 +41,9 @@ const app = {
     resumeIcon.src = data.icons.clean;
     // item : résumé ---> add link
     const resumeLink = document.createElement('a');
-    resumeLink.href = '#intro';
+    resumeLink.href = '#phantom';
     resumeLink.appendChild(resumeIcon);
     resumeDiv.appendChild(resumeLink);
-
     // item : social
     const socialDiv = document.createElement('div');
     socialDiv.classList = 'header-navbar-item-div';
@@ -63,7 +58,6 @@ const app = {
     socialLink.href = '#social';
     socialLink.appendChild(socialIcon);
     socialDiv.appendChild(socialLink);
-
     // item : projects
     const projectsDiv = document.createElement('div');
     projectsDiv.classList = 'header-navbar-item-div';
@@ -78,7 +72,6 @@ const app = {
     projectsLink.href = '#projects';
     projectsLink.appendChild(projectsIcon);
     projectsDiv.appendChild(projectsLink);
-
   },
 
   main: function () {
@@ -97,13 +90,11 @@ const app = {
    * "résumé" : resume and portrait 
   */
   intro: function () {
-
     // container
     const introDiv = document.createElement('div');
     introDiv.id = 'intro';
     introDiv.classList = 'intro';
     app.mainElement.appendChild(introDiv);
-
     // h2 : name: "Martin GS",
     const nameH2 = document.createElement('h2');
     nameH2.id = "intro-name";
@@ -111,7 +102,6 @@ const app = {
     const nameData = data.intro.name;
     nameH2.innerHTML = nameData;
     introDiv.appendChild(nameH2);
-
     // span : position
     const positionSpan = document.createElement('h3');
     positionSpan.id = "intro-position";
@@ -119,7 +109,6 @@ const app = {
     const positionData = data.intro.position;
     positionSpan.innerHTML = positionData;
     introDiv.appendChild(positionSpan);
-
     // span : specialization
     const speSpan = document.createElement('h4');
     speSpan.id = "intro-spe";
@@ -127,20 +116,17 @@ const app = {
     const speData = data.intro.specialization;
     speSpan.innerHTML = speData;
     introDiv.appendChild(speSpan);
-
     // location icon
     const locationIcon = document.createElement('img');
     locationIcon.id = "intro-location-icon";
     locationIcon.src = data.icons.location;
     introDiv.appendChild(locationIcon);
-
     // location span
     const locationSpan = document.createElement('span');
     locationSpan.id = "intro-location-span";
     const locationData = data.intro.location;
     locationSpan.innerHTML = locationData;
     introDiv.appendChild(locationSpan);
-
     // résumé
     const resumeDiv = document.createElement('div');
     resumeDiv.id = "intro-resume";
@@ -148,7 +134,6 @@ const app = {
     const resumeData = data.intro.resume;
     resumeDiv.innerHTML = resumeData;
     introDiv.appendChild(resumeDiv);
-
     // portrait
     const portraitImage = document.createElement('img');
     portraitImage.id = 'intro-portrait';
@@ -156,30 +141,25 @@ const app = {
     portraitImage.src = data.intro.portrait;
     portraitImage.alt = 'portrait Martin GS';
     introDiv.appendChild(portraitImage);
-
   },
 
   /**
    * "social": social network links
   */
   social: function () {
-
     // container
     const socialDiv = document.createElement('div');
     socialDiv.id = 'social';
     socialDiv.classList = 'social';
-
     // title
     const socialTitle = document.createElement('h4');
     socialTitle.textContent = "Réseaux sociaux";
     socialDiv.appendChild(socialTitle);
-
     // hashtags
     const hashtagsParagraph = document.createElement('p');
     hashtagsParagraph.id = 'social-hashtags';
     hashtagsParagraph.textContent = data.social.text;
     socialDiv.appendChild(hashtagsParagraph);
-
     // Image-links
     const linksDiv = document.createElement('div');
     linksDiv.id = 'social-links';
@@ -210,7 +190,6 @@ const app = {
       socialDiv.appendChild(hashtagSpan);
       linksDiv.appendChild(socialDiv);
     });
-
     // append childs
     socialDiv.appendChild(linksDiv);
     app.mainElement.appendChild(socialDiv);
@@ -220,23 +199,19 @@ const app = {
    *  "projects" : cards-presentation of projects and links
   */
   projects: function () {
-
     // container
     const projectsDiv = document.createElement('div');
     projectsDiv.classList.add('projects');
     projectsDiv.id = 'projects';
     app.mainElement.appendChild(projectsDiv);
-
     // title
     const projectsTitle = document.createElement('h4');
     projectsTitle.textContent = "Projets personnels";
     projectsDiv.appendChild(projectsTitle);
-
     // description
     const projectsDescription = document.createElement('p');
     projectsDescription.textContent = "Voici une liste (non exhaustive) de mes projets personnels, leurs descriptions et leurs liens respectifs";
     projectsDiv.appendChild(projectsDescription);
-
     // cards
     const projectsData = data.projects;
     projectsData.forEach(item => {
@@ -290,50 +265,24 @@ const app = {
       linkRepository.appendChild(linkRepositoryImage);
       cardDiv.appendChild(linkRepository);
     });
-
   },
 
   /**
    *  Back-to-top button
   */
   backtotop: function () {
-
     const backtotopContainer = document.createElement('div');
     backtotopContainer.id = 'backtotopContainer';
-    const button = document.createElement('button');
-    button.id = 'backtotop-link';
-    // Option 1 : "add event linstener"
-    button.addEventListener("click", backToTop);
-    // Option 2 : "on click fonction"
-    // button.onclick = function () {
-    //   document.body.scrollTop = 0;
-    //   document.documentElement.scrollTop = 0;
-    // };
+    app.containerDiv.appendChild(backtotopContainer);
+    const link = document.createElement('a');
+    link.id = 'backtotop-link';
+    link.href = '#phantom';
+    backtotopContainer.appendChild(link);
     const image = document.createElement('img');
     image.id = 'backtotop-image';
     image.src = data.icons.clean;
     image.alt = 'Revenir en haut de la page';
-    button.appendChild(image);
-    backtotopContainer.appendChild(button);
-    app.containerDiv.appendChild(backtotopContainer);
-
-    function backToTop() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    }
-
-    // window.onscroll = function () {
-    //   showButton();
-    // };
-
-    // function showButton() {
-    //   if (document.body.scrollTop > 25 || document.documentElement.scrollTop > 25) {
-    //     backtotopContainer.style.display = "block";
-    //   } else {
-    //     backtotopContainer.style.display = "none";
-    //   }
-    // }
-
+    link.appendChild(image);
   },
 
   init: function () {
