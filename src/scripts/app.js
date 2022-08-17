@@ -11,9 +11,11 @@ const app = {
   },
 
   header: function () {
+
     // container
     const headerElement = document.createElement('header');
     app.containerDiv.appendChild(headerElement);
+
     // brand
     const brandContainer = document.createElement('div');
     brandContainer.id = 'header-brand-container';
@@ -21,46 +23,56 @@ const app = {
     const brand = document.createElement('h1');
     brand.textContent = 'Martin GS';
     brandContainer.appendChild(brand);
+
     // navbar
     const navbarContainer = document.createElement('div');
     navbarContainer.id = 'header-navbar-container';
     headerElement.appendChild(navbarContainer);
-    // résumé link icon
-    const resumeContainer = document.createElement('div');
+
+    // item : résumé
+    const resumeDiv = document.createElement('div');
+    resumeDiv.classList = 'header-navbar-item-div';
+    navbarContainer.appendChild(resumeDiv);
+    // item : résumé ---> add icon transparent
     const resumeIcon = document.createElement('img');
-    resumeIcon.classList = 'header-navbar-icon';
+    resumeIcon.id = 'header-navbar-resume-icon';
     resumeIcon.alt = 'Résumé (intro)';
-    resumeIcon.src = data.header.resumeicon;
+    resumeIcon.src = data.header.icon_clean;
+    // item : résumé ---> add link
     const resumeLink = document.createElement('a');
-    resumeLink.classList = 'header-navbar-link';
     resumeLink.href = '#intro';
     resumeLink.appendChild(resumeIcon);
-    resumeContainer.appendChild(resumeLink);
-    navbarContainer.appendChild(resumeContainer);
-    // social link icon
-    const socialContainer = document.createElement('div');
+    resumeDiv.appendChild(resumeLink);
+
+    // item : social
+    const socialDiv = document.createElement('div');
+    socialDiv.classList = 'header-navbar-item-div';
+    navbarContainer.appendChild(socialDiv);
+    // item : social ---> add icon transparent
     const socialIcon = document.createElement('img');
-    socialIcon.classList = 'header-navbar-icon';
+    socialIcon.id = 'header-navbar-social-icon';
     socialIcon.alt = 'Contactez-moi (réseaux sociaux)';
-    socialIcon.src = data.header.socialicon;
+    socialIcon.src = data.header.icon_clean;
+    // item : social ---> add link
     const socialLink = document.createElement('a');
-    socialLink.classList = 'header-navbar-link';
     socialLink.href = '#social';
     socialLink.appendChild(socialIcon);
-    socialContainer.appendChild(socialLink);
-    navbarContainer.appendChild(socialContainer);
-    // projects link icon
-    const projectsContainer = document.createElement('div');
-    const projectIcon = document.createElement('img');
-    projectIcon.classList = 'header-navbar-icon';
-    projectIcon.alt = 'Mes projets personnels (et leurs liens)';
-    projectIcon.src = data.header.projecticon;
-    const projectLink = document.createElement('a');
-    projectLink.classList = 'header-navbar-link';
-    projectLink.href = '#projects';
-    projectLink.appendChild(projectIcon);
-    projectsContainer.appendChild(projectLink);
-    navbarContainer.appendChild(projectsContainer);
+    socialDiv.appendChild(socialLink);
+
+    // item : projects
+    const projectsDiv = document.createElement('div');
+    projectsDiv.classList = 'header-navbar-item-div';
+    navbarContainer.appendChild(projectsDiv);
+    // item : projects ---> add icon transparent
+    const projectsIcon = document.createElement('img');
+    projectsIcon.id = 'header-navbar-projects-icon';
+    projectsIcon.alt = 'Mes projets personnels (et leurs liens)';
+    projectsIcon.src = data.header.icon_clean;
+    // item : projects ---> add link
+    const projectsLink = document.createElement('a');
+    projectsLink.href = '#projects';
+    projectsLink.appendChild(projectsIcon);
+    projectsDiv.appendChild(projectsLink);
   },
 
   main: function () {

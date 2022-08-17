@@ -1,8 +1,12 @@
 const data = {
   header: {
-    resumeicon: "./assets/images/icon-resume.svg",
-    socialicon: "./assets/images/icon-social.svg",
-    projecticon: "./assets/images/icon-project.svg",
+    icon_clean: "./assets/images/icon-clean.png",
+    icon_resume: "./assets/images/icon-resume.svg",
+    icon_resume_hover: "./assets/images/icon-resume-hover.svg",
+    icon_social: "./assets/images/icon-social.svg",
+    icon_social_hover: "./assets/images/icon-social-hover.svg",
+    icon_projects: "./assets/images/icon-projects.svg",
+    icon_projects_hover: "./assets/images/icon-projects-hover.svg",
   },
   intro: {
     name: "Martin GS",

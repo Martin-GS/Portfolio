@@ -7,7 +7,7 @@
    viewBox="0 0 16 16"
    version="1.1"
    id="svg907"
-   sodipodi:docname="person.svg"
+   sodipodi:docname="icon-resume-hover.svg"
    inkscape:version="1.2.1 (ef4d3fba62, 2022-07-19, custom)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -25,9 +25,9 @@
      inkscape:pagecheckerboard="1"
      inkscape:deskcolor="#505050"
      showgrid="false"
-     inkscape:zoom="16"
-     inkscape:cx="18.09375"
-     inkscape:cy="9.65625"
+     inkscape:zoom="32"
+     inkscape:cx="7.03125"
+     inkscape:cy="8.484375"
      inkscape:window-width="1854"
      inkscape:window-height="1016"
      inkscape:window-x="0"
@@ -35,10 +35,10 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="svg907" />
   <path
-     d="M 8,8 C 11.999998,8 11.999998,2 8,2 4.0000017,2 4.0000017,8 8,8 Z M 10,5 C 10,7.6666655 6,7.6666655 6,5 6,2.3333345 10,2.3333345 10,5 Z m 4,8 c 0,0.291191 0,2.5 0,2.5 -0.0024,0.09929 -11.9981074,0.08826 -12,0 V 13 c 0,-1 1,-4 6,-4 5,0 6,3 6,4 z M 13,12.996 C 12.999,12.75 12.846,12.01 12.168,11.332 11.516,10.68 10.289,10 8,10 5.71,10 4.484,10.68 3.832,11.332 3.154,12.01 3.002,12.75 3,12.996 V 15.5 h 10 z"
+     d="M 8,8 C 11.999998,8 11.999998,2 8,2 4.0000017,2 4.0000017,8 8,8 Z m 6,5 v 2.5 c -0.0024,0.09929 -11.9981074,0.08826 -12,0 V 13 c 0,-1 1,-4 6,-4 5,0 6,3 6,4 z"
      id="path905"
      style="fill:#f5f5f5;fill-opacity:1"
-     sodipodi:nodetypes="sssssssccssscssscccc" />
+     sodipodi:nodetypes="ssssccsss" />
   <path
      d="M 2,0 C 0.89543,0 0,0.8954305 0,2 v 12 c 0,1.104569 0.895431,2 2,2 h 12 c 1.104569,0 2,-0.895431 2,-2 V 2 C 16,0.8954305 15.10457,0 14,0 Z m 12,0.99999999 c 0.552285,0 1,0.44771521 1,1.00000001 v 12 c 0,0.552285 -1,1 -1,1 H 2 C 2,15 1,14.552285 1,14 V 2 C 1,1.4477152 1.447715,0.99999999 2,0.99999999 Z"
      id="path200"
