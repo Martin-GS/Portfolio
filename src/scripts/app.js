@@ -119,37 +119,37 @@ const app = {
     portraitDiv.appendChild(portraitImage);
     labelsDiv.appendChild(portraitDiv);
 
-    // about-labels-titles
+    // (sub)titles
     const titlesDiv = document.createElement('div');
     titlesDiv.classList = "about-labels-titles";
     labelsDiv.appendChild(titlesDiv);
-    // about-balels-titles : name
+    // name
     const name = document.createElement('h2');
     const nameData = data.about.name;
     name.innerHTML = nameData;
     titlesDiv.appendChild(name);
-    // about-balels-titles : position
+    // position
     const positionSpan = document.createElement('h3');
     const positionData = data.about.position;
     positionSpan.innerHTML = positionData;
     titlesDiv.appendChild(positionSpan);
-    // about-balels-titles : specialization
+    // specialization
     const speSpan = document.createElement('h4');
     const speData = data.about.specialization;
     speSpan.innerHTML = speData;
     titlesDiv.appendChild(speSpan);
-    // about-balels-titles : location container
+    // location container
     const locationContainer = document.createElement('div');
     locationContainer.id = "about-location";
-    // about-balels-titles : location icon
+    // location icon
     const locationIcon = document.createElement('img');
     locationIcon.id = "about-location-icon";
     locationIcon.src = data.icons.location;
-    // about-balels-titles : location span
+    // location span
     const locationSpan = document.createElement('span');
     const locationData = data.about.location;
     locationSpan.innerHTML = locationData;
-    // about-balels-titles : location link
+    // location link
     const locationLink = document.createElement('a');
     locationLink.href = 'https://www.qwant.com/maps/place/admin:fr:83069@Hy%C3%A8res_83400#map=10.22/43.0946198/6.2955735';
     locationLink.target = "_blank";
@@ -158,8 +158,6 @@ const app = {
     locationLink.appendChild(locationSpan);
     locationContainer.appendChild(locationLink);
     titlesDiv.appendChild(locationContainer);
-
-    // aboutContainer.appendChild(labelsDiv);
 
     // about-resume
     const resumeDiv = document.createElement('div');

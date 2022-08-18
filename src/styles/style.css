@@ -83,7 +83,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: #151d31;
+  background-color: #131721;
 }
 
 .header-navbar-container {
@@ -134,7 +134,6 @@ h1 {
 
 main {
   padding: 0 4em;
-  background-color: rgb(94, 19, 19);
 }
 
 /* MAIN : sections titles */
@@ -147,17 +146,19 @@ h5 {
 /*  MAIN : about */
 
 .about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 100vh;
   padding: 6em 0;
-  background-color: rgb(19, 36, 94);
 }
 
 .about-labels {
+  width: 100%;
   display: flex;
   flex-direction: row;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   align-items: center;
-  background-color: rgb(10, 80, 27);
 }
 
 .about-labels-portrait {
@@ -172,38 +173,36 @@ h5 {
 
 .about-labels-titles {
   width: 100%;
-  background-color: rgb(136, 119, 22);
 }
 
 /* MAIN : about : name */
 h2 {
   font-family: 'Mono Medium', monospace;
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #FFB454;
+  line-height: 1.8em;
 }
 
 /* MAIN : about : position */
 h3 {
   font-family: 'Mono Medium', monospace;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: #F07178;
+  line-height: 1.5em;
 }
 
 /* MAIN : about : specialization */
 h4 {
   font-family: 'Mono Medium', monospace;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   color: #AAD94C;
-}
-
-.about-resume {
-  background-color: rgb(25, 43, 23);
+  line-height: 1.5em;
 }
 
 #about-location {
   font-family: 'Mono Regular', monospace;
   font-size: 1.4rem;
-  line-height: 2.7em;
+  line-height: 1.7em;
 }
 
 #about-location-icon {
@@ -211,6 +210,10 @@ h4 {
   height: 16px;
   width: auto;
   margin-right: 7px;
+}
+
+.about-resume {
+  padding: 1em 0;
 }
 
 /*  MAIN : social */
