@@ -69,6 +69,12 @@ a:hover {
   /* text-decoration: none; */
 }
 
+/* cards titles (social and projects) */
+h6 {
+  font-family: 'Mono Regular', monospace;
+  font-size: 1.2rem;
+}
+
 /* ---------- HEADER ---------- */
 
 header {
@@ -133,7 +139,7 @@ h1 {
 /* ---------- MAIN ---------- */
 
 main {
-  padding: 0 4em;
+  width: 100%;
 }
 
 /* MAIN : sections titles */
@@ -150,7 +156,7 @@ h5 {
   flex-direction: column;
   justify-content: center;
   height: 100vh;
-  padding: 6em 0;
+  padding: 4em;
 }
 
 .about-labels {
@@ -218,12 +224,32 @@ h4 {
 
 /*  MAIN : social */
 
-/*  MAIN : projects */
+.social {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  padding: 4em;
+}
 
-/* cards titles */
-h6 {
-  font-family: 'Mono Medium', monospace;
-  font-size: 1.25rem;
+.social-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 4em;
+}
+
+.social-links-card {
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-links-card img {
+  width: 50px;
+  margin-bottom: 20px;
 }
 
 /* ---------- FOOTER ---------- */

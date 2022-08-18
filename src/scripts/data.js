@@ -21,7 +21,7 @@ const data = {
     portrait: "./assets/images/martings-portrait.jpg"
   },
   social: {
-    text: "#Code #Développement #Web #FrontEnd #BackEnd #FullStack #JavaScript #React #Node #Tech #Travel #Sport",
+    text: "<p>Envie de parler dév, tech et projets ?<p></p>Retrouvez-moi sur LinkedIn pour parler #job et #projetsPro, sur Twitter pour discuter #dév et #tech, sur Instagram, où je publie mes #photos... sans oublier GitHub, pour parler tout simplement #code.<p>",
     socialnetworks: [
       {
         title: "LinkedIn",
@@ -33,13 +33,19 @@ const data = {
         title: "Twitter",
         url: "https://twitter.com/__martin_gs__",
         image: "./assets/images/social-twitter-logo.svg",
-        hashtag: "#tech"
+        hashtag: "#dev"
       },
       {
         title: "Instagram",
         url: "https://www.instagram.com/__martin.gs__",
         image: "./assets/images/social-instagram-logo.svg",
-        hashtag: "#perso"
+        hashtag: "#photo"
+      },
+      {
+        title: "GitHub",
+        url: "https://github.com/Martin-GS",
+        image: "./assets/images/social-github-logo.svg",
+        hashtag: "#repo"
       }
     ]
   },

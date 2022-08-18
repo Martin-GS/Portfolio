@@ -90,7 +90,6 @@ const app = {
     const textSpan = document.createElement('span');
     textSpan.textContent = ` • Martin GS • 2020-${thisYear}`;
     footerElement.appendChild(textSpan);
-
     app.containerDiv.appendChild(footerElement);
   },
 
@@ -98,17 +97,15 @@ const app = {
    * "résumé" : resume and portrait 
   */
   about: function () {
-
     // container
     const aboutContainer = document.createElement('div');
+    aboutContainer.id = 'about';
     aboutContainer.classList = 'about';
     app.mainElement.appendChild(aboutContainer);
-
     // about-labels : titles AND portrait
     const labelsDiv = document.createElement('div');
     labelsDiv.classList = "about-labels";
     aboutContainer.appendChild(labelsDiv);
-
     // portrait
     const portraitDiv = document.createElement('div');
     portraitDiv.classList = 'about-labels-portrait';
@@ -118,7 +115,6 @@ const app = {
     portraitImage.alt = 'Portrait Martin GS';
     portraitDiv.appendChild(portraitImage);
     labelsDiv.appendChild(portraitDiv);
-
     // (sub)titles
     const titlesDiv = document.createElement('div');
     titlesDiv.classList = "about-labels-titles";
@@ -158,7 +154,6 @@ const app = {
     locationLink.appendChild(locationSpan);
     locationContainer.appendChild(locationLink);
     titlesDiv.appendChild(locationContainer);
-
     // about-resume
     const resumeDiv = document.createElement('div');
     resumeDiv.classList = "about-resume";
@@ -170,63 +165,62 @@ const app = {
    * "social": social network links
   */
   social: function () {
-    // // container
-    // const socialDiv = document.createElement('div');
-    // socialDiv.id = 'social';
-    // socialDiv.classList = 'social';
-    // // title
-    // const socialTitle = document.createElement('h5');
-    // socialTitle.textContent = "Réseaux sociaux";
-    // socialDiv.appendChild(socialTitle);
-    // // hashtags
-    // const hashtagsParagraph = document.createElement('p');
-    // hashtagsParagraph.id = 'social-hashtags';
-    // hashtagsParagraph.textContent = data.social.text;
-    // socialDiv.appendChild(hashtagsParagraph);
-    // // Image-links
-    // const linksDiv = document.createElement('div');
-    // linksDiv.id = 'social-links';
-    // linksDiv.classList = 'social-links';
-    // const socialData = data.social.socialnetworks;
-    // socialData.forEach(item => {
-    //   // container
-    //   const socialDiv = document.createElement('div');
-    //   socialDiv.classList = 'social-links-card';
-    //   // image
-    //   const socialLogo = document.createElement('img');
-    //   socialLogo.classList = 'social-links-card-logo';
-    //   socialLogo.src = item.image;
-    //   socialLogo.alt = `Lien ${item.title}`;
-    //   // link
-    //   const socialButton = document.createElement('a');
-    //   socialButton.href = item.url;
-    //   socialButton.target = "_blank";
-    //   socialButton.rel = "noopener noreferrer";
-    //   // hashtag
-    //   const hashtagSpan = document.createElement('span');
-    //   hashtagSpan.id = item.title;
-    //   hashtagSpan.className = `social-links-card-hashtag-${item.title}`;
-    //   hashtagSpan.textContent = item.hashtag;
-    //   // append childs
-    //   socialDiv.appendChild(socialButton);
-    //   socialButton.appendChild(socialLogo);
-    //   socialDiv.appendChild(hashtagSpan);
-    //   linksDiv.appendChild(socialDiv);
-    // });
-    // // append childs
-    // socialDiv.appendChild(linksDiv);
-    // app.mainElement.appendChild(socialDiv);
+    // container
+    const socialDiv = document.createElement('div');
+    socialDiv.id = 'social';
+    socialDiv.classList = 'social';
+    app.mainElement.appendChild(socialDiv);
+    // title
+    const socialTitle = document.createElement('h5');
+    socialTitle.textContent = "Parlons-en !";
+    socialDiv.appendChild(socialTitle);
+    // text
+    const textParagraph = document.createElement('p');
+    textParagraph.classList = 'social-hashtags';
+    textParagraph.innerHTML = data.social.text;
+    socialDiv.appendChild(textParagraph);
+
+    // container links (logo buttons)
+    const linksDiv = document.createElement('div');
+    linksDiv.classList = 'social-links';
+    // cards : social networks loop
+    const socialData = data.social.socialnetworks;
+    socialData.forEach(item => {
+      // container
+      const socialDiv = document.createElement('div');
+      socialDiv.classList = 'social-links-card';
+      // image
+      const socialLogo = document.createElement('img');
+      socialLogo.src = item.image;
+      socialLogo.alt = `Lien ${item.title}`;
+      // link
+      const socialButton = document.createElement('a');
+      socialButton.href = item.url;
+      socialButton.target = "_blank";
+      socialButton.rel = "noopener noreferrer";
+      // hashtag
+      const hashtagSpan = document.createElement('h6');
+      hashtagSpan.id = item.title;
+      hashtagSpan.textContent = item.hashtag;
+      // append childs
+      socialDiv.appendChild(socialButton);
+      socialButton.appendChild(socialLogo);
+      socialDiv.appendChild(hashtagSpan);
+      linksDiv.appendChild(socialDiv);
+    });
+    // append childs
+    socialDiv.appendChild(linksDiv);
   },
 
   /**
    *  "projects" : cards-presentation of projects and links
   */
   projects: function () {
-    // // container
-    // const projectsDiv = document.createElement('div');
-    // projectsDiv.classList.add('projects');
-    // projectsDiv.id = 'projects';
-    // app.mainElement.appendChild(projectsDiv);
+    // container
+    const projectsDiv = document.createElement('div');
+    projectsDiv.id = 'projects';
+    projectsDiv.classList = 'projects';
+    app.mainElement.appendChild(projectsDiv);
     // // title
     // const projectsTitle = document.createElement('h5');
     // projectsTitle.textContent = "Projets personnels";
