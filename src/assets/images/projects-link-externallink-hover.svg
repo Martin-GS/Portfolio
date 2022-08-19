@@ -11,7 +11,7 @@
    class="feather feather-external-link"
    version="1.1"
    id="svg10536"
-   sodipodi:docname="projects-link-externallink.svg"
+   sodipodi:docname="projects-link-externallink-hover.svg"
    inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -42,33 +42,33 @@
   <g
      id="g1159"
      transform="matrix(0.99948241,0,0,0.98796306,-2.3091636,1.9410655)"
-     style="stroke:#39bae6;stroke-opacity:1">
+     style="stroke:#f5f5f5;stroke-opacity:1">
     <g
        id="g11034"
-       style="stroke:#39bae6;stroke-opacity:1"
+       style="stroke:#f5f5f5;stroke-opacity:1"
        transform="matrix(12.513698,0,0,12.652773,-22.712306,-27.275042)">
       <g
          id="g11027"
-         style="stroke:#39bae6;stroke-opacity:1">
+         style="stroke:#f5f5f5;stroke-opacity:1">
         <polyline
            points="15 3 21 3 21 9"
            id="polyline10532"
-           style="stroke:#39bae6;stroke-opacity:1" />
+           style="stroke:#f5f5f5;stroke-opacity:1" />
       </g>
       <g
          id="g10661"
-         style="stroke:#39bae6;stroke-opacity:1">
+         style="stroke:#f5f5f5;stroke-opacity:1">
         <path
            d="m 18,13 v 6 a 2,2 0 0 1 -2,2 H 5 A 2,2 0 0 1 3,19 V 8 A 2,2 0 0 1 5,6 h 6"
            id="path10530"
-           style="stroke:#39bae6;stroke-opacity:1" />
+           style="stroke:#f5f5f5;stroke-opacity:1" />
         <line
            x1="10"
            y1="14"
            x2="21"
            y2="3"
            id="line10534"
-           style="stroke:#39bae6;stroke-opacity:1" />
+           style="stroke:#f5f5f5;stroke-opacity:1" />
       </g>
     </g>
   </g>

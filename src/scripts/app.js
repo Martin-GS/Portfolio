@@ -174,25 +174,25 @@ const app = {
     socialContainer.id = 'social';
     socialContainer.classList = 'social';
     app.mainElement.appendChild(socialContainer);
-    // paragraph
-    const textParagraph = document.createElement('p');
-    textParagraph.classList = 'social-paragraph';
-    textParagraph.textContent = data.social.text;
-    socialContainer.appendChild(textParagraph);
+    // description
+    const description = document.createElement('p');
+    description.classList = 'social-description';
+    description.textContent = data.social.text;
+    socialContainer.appendChild(description);
     // title
     const socialTitle = document.createElement('h5');
     socialTitle.textContent = "Parlons-en !";
     socialContainer.appendChild(socialTitle);
     // container links
     const cardsContainer = document.createElement('div');
-    cardsContainer.classList = 'social-links';
+    cardsContainer.classList = 'social-cards';
     // cards : social networks loop
     const socialData = data.social.socialnetworks;
     // loop data
     socialData.forEach(item => {
       // container
       const card = document.createElement('div');
-      card.classList = 'social-links-card';
+      card.classList = 'social-cards--card';
       cardsContainer.appendChild(card);
       // image link
       const imageLink = document.createElement('a');
@@ -202,8 +202,8 @@ const app = {
       card.appendChild(imageLink);
       // image logo
       const image = document.createElement('img');
-      image.classList = 'social-links-card-image';
-      image.id = `social-links-card-image--${item.title}`;
+      image.classList = 'social-cards--card-image';
+      image.id = `social-cards--card-image--${item.title}`;
       image.src = data.icons.clean;
       image.alt = `Bouton ${item.title}`;
       image.title = `${item.title}`;
@@ -220,7 +220,7 @@ const app = {
       titleLink.appendChild(title);
       // hashtags
       const hashtagsSpan = document.createElement('p');
-      hashtagsSpan.classList = 'social-links-card-hashtags';
+      hashtagsSpan.classList = 'social-cards--card-hashtags';
       hashtagsSpan.innerHTML = item.hashtags;
       card.appendChild(hashtagsSpan);
     });
@@ -233,72 +233,93 @@ const app = {
   */
   projects: function () {
     // container
-    const projectsDiv = document.createElement('div');
-    projectsDiv.id = 'projects';
-    projectsDiv.classList = 'projects';
-    app.mainElement.appendChild(projectsDiv);
-    // // title
-    // const projectsTitle = document.createElement('h5');
-    // projectsTitle.textContent = "Projets personnels";
-    // projectsDiv.appendChild(projectsTitle);
-    // // description
-    // const projectsDescription = document.createElement('p');
-    // projectsDescription.textContent = "Voici une liste (non exhaustive) de mes projets personnels, leurs descriptions et leurs liens respectifs";
-    // projectsDiv.appendChild(projectsDescription);
-    // // cards
-    // const projectsData = data.projects;
-    // projectsData.forEach(item => {
-    //   // card-div
-    //   const cardDiv = document.createElement('div');
-    //   cardDiv.classList = 'projects-card';
-    //   projectsDiv.appendChild(cardDiv);
-    //   // logo
-    //   const cardLogo = document.createElement('img');
-    //   cardLogo.classList = 'projects-card-logo';
-    //   cardLogo.src = item.image;
-    //   cardLogo.alt = `Logo ${item.title}`;
-    //   cardLogo.title = `Logo ${item.title}`;
-    //   cardDiv.appendChild(cardLogo);
-    //   // title
-    //   const cardTitle = document.createElement('h6');
-    //   cardTitle.classList = 'projects-card-title';
-    //   cardTitle.textContent = item.title;
-    //   cardDiv.appendChild(cardTitle);
-    //   // description
-    //   const cardDescription = document.createElement('p');
-    //   cardDescription.classList = 'projects-card-description';
-    //   cardDescription.innerHTML = `<strong>Description</strong> :<br /> <q> ${item.description} </q>`;
-    //   cardDiv.appendChild(cardDescription);
-    //   // technos
-    //   const cardTechnos = document.createElement('p');
-    //   cardTechnos.classList = 'projects-card-description';
-    //   cardTechnos.innerHTML = `<strong>Technos</strong> :<br /> ${item.technos}`;
-    //   cardDiv.appendChild(cardTechnos);
-    //   // link to website
-    //   const linkWebsite = document.createElement('a');
-    //   linkWebsite.classList = 'projects-card-linkwebsite--anchor';
-    //   linkWebsite.href = item.url_website;
-    //   linkWebsite.target = "_blank";
-    //   linkWebsite.rel = "noopener noreferrer";
-    //   const linkWebsiteImage = document.createElement('img');
-    //   linkWebsiteImage.classList = 'projects-card-linkwebsite--image';
-    //   linkWebsiteImage.src = item.externallink_icon;
-    //   linkWebsiteImage.alt = `Icône et lien vers le site ${item.title}`;
-    //   linkWebsite.appendChild(linkWebsiteImage);
-    //   cardDiv.appendChild(linkWebsite);
-    //   // link to repository
-    //   const linkRepository = document.createElement('a');
-    //   linkRepository.classList = 'projects-card-linkrepository--anchor';
-    //   linkRepository.href = item.url_repository;
-    //   linkRepository.target = "_blank";
-    //   linkRepository.rel = "noopener noreferrer";
-    //   const linkRepositoryImage = document.createElement('img');
-    //   linkRepositoryImage.classList = 'projects-card-linkrepository--image';
-    //   linkRepositoryImage.src = item.github_icon;
-    //   linkRepositoryImage.alt = `Icône et lien vers le répertoire GitHub du projet ${item.title}`;
-    //   linkRepository.appendChild(linkRepositoryImage);
-    //   cardDiv.appendChild(linkRepository);
-    // });
+    const projectsContainer = document.createElement('div');
+    projectsContainer.id = 'projects';
+    projectsContainer.classList = 'projects';
+    app.mainElement.appendChild(projectsContainer);
+    // title
+    const projectsTitle = document.createElement('h5');
+    projectsTitle.textContent = "Projets personnels";
+    projectsContainer.appendChild(projectsTitle);
+    // description
+    const description = document.createElement('p');
+    description.classList = 'projects-description';
+    description.textContent = "Voici une liste (non exhaustive) de mes projets personnels, leurs description, les liens ves les sites respectifs et leurs dépôts GitHub.";
+    projectsContainer.appendChild(description);
+    // cards container
+    const cardsContainer = document.createElement('div');
+    cardsContainer.classList = 'projects-cards';
+    projectsContainer.appendChild(cardsContainer);
+    // loop
+    const projectsData = data.projects;
+    projectsData.forEach(item => {
+      // card-div
+      const card = document.createElement('div');
+      card.classList = 'projects-cards--card';
+      card.id = `projects-cards--card-${item.title}`;
+      cardsContainer.appendChild(card);
+      // logo
+      const logo = document.createElement('img');
+      logo.classList = 'projects-cards--card-logo';
+      logo.src = item.image;
+      logo.alt = `Logo ${item.title}`;
+      logo.title = item.title;
+      card.appendChild(logo);
+      // title link
+      const linkTitle = document.createElement('a');
+      linkTitle.classList = 'projects-cards--card-anchor';
+      linkTitle.href = item.url_website;
+      linkTitle.target = "_blank";
+      linkTitle.rel = "noopener noreferrer";
+      card.appendChild(linkTitle);
+      // title text
+      const title = document.createElement('h6');
+      title.classList = 'projects-cards--card-title';
+      title.textContent = item.title;
+      linkTitle.appendChild(title);
+      // description
+      const description = document.createElement('p');
+      description.innerHTML = item.description;
+      card.appendChild(description);
+      // technos
+      const technos = document.createElement('p');
+      technos.innerHTML = item.technos;
+      card.appendChild(technos);
+
+      // links container
+      const linksContainer = document.createElement('div');
+      linksContainer.classList = 'projects-cards--card-links';
+      card.appendChild(linksContainer);
+
+      // link to website
+      // link to website : anchor
+      const linkWebsite = document.createElement('a');
+      linkWebsite.classList = 'projects-cards--card-links--linkwebsite--anchor';
+      linkWebsite.href = item.url_website;
+      linkWebsite.target = "_blank";
+      linkWebsite.rel = "noopener noreferrer";
+      linksContainer.appendChild(linkWebsite);
+      // link to website : image
+      const linkWebsiteImage = document.createElement('img');
+      linkWebsiteImage.classList = 'projects-cards--card-links--linkwebsite--image';
+      linkWebsiteImage.src = data.icons.clean;
+      linkWebsiteImage.alt = `Lien vers le site ${item.title}`;
+      linkWebsite.appendChild(linkWebsiteImage);
+
+      // link to repository : anchor
+      const linkRepository = document.createElement('a');
+      linkRepository.classList = 'projects-cards--card-links--linkrepository--anchor';
+      linkRepository.href = item.url_repository;
+      linkRepository.target = "_blank";
+      linkRepository.rel = "noopener noreferrer";
+      linksContainer.appendChild(linkRepository);
+      // link to repository : image
+      const linkRepositoryImage = document.createElement('img');
+      linkRepositoryImage.classList = 'projects-cards--card-links--linkrepository--image';
+      linkRepositoryImage.src = data.icons.clean;
+      linkRepositoryImage.alt = `Icône et lien vers le répertoire GitHub du projet ${item.title} `;
+      linkRepository.appendChild(linkRepositoryImage);
+    });
   },
 
   /**
