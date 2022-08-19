@@ -21,37 +21,44 @@ const data = {
     portrait: "./assets/images/martings-portrait.jpg"
   },
   social: {
-    text: "<p>Envie de parler dév, tech et projets ?<p></p>Retrouvez-moi sur LinkedIn pour parler #job et #projetsPro, sur Twitter pour discuter #dév et #tech, sur Instagram, où je publie mes #photos... sans oublier GitHub, pour parler tout simplement #code.<p>",
+    text: "Envie de parler dév, tech et projets ?",
     socialnetworks: [
       {
-        title: "LinkedIn",
+        title: "linkedin",
         url: "https://www.linkedin.com/in/martings",
-        image: "./assets/images/social-linkedin-logo.svg",
-        hashtag: "#pro"
+        image: "./assets/images/social-linkedin.svg",
+        hashtagtitle: "#pro",
+        hashtags: "#CV<br /> #job"
       },
       {
-        title: "Twitter",
+        title: "twitter",
         url: "https://twitter.com/__martin_gs__",
-        image: "./assets/images/social-twitter-logo.svg",
-        hashtag: "#dev"
+        image: "./assets/images/social-twitter.svg",
+        hashtagtitle: "#tech",
+        hashtags: "#code<br /> #dev"
       },
       {
-        title: "Instagram",
+        title: "instagram",
         url: "https://www.instagram.com/__martin.gs__",
-        image: "./assets/images/social-instagram-logo.svg",
-        hashtag: "#photo"
+        image: "./assets/images/social-instagram.svg",
+        hashtagtitle: "#perso",
+        hashtags: "#photo<br /> #lifeStyle"
       },
       {
-        title: "GitHub",
+        title: "github",
         url: "https://github.com/Martin-GS",
-        image: "./assets/images/social-github-logo.svg",
-        hashtag: "#repo"
+        image: "./assets/images/social-github.svg",
+        hashtagtitle: "#repo",
+        hashtags: "#projects<br /> #versioning"
+      },
+      {
+        title: "mail",
+        url: "mailto:portfolio@martin.gs",
+        image: "./assets/images/social-mail.svg",
+        hashtagtitle: "#mail",
+        hashtags: "#contact<br /> #courriel"
       }
     ]
-  },
-  repositories: {
-    url: "https://github.com/Martin-GS",
-    image: "./assets/images/repositories-github-logo.svg"
   },
   projects: [
     {

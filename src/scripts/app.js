@@ -165,51 +165,66 @@ const app = {
    * "social": social network links
   */
   social: function () {
+
     // container
-    const socialDiv = document.createElement('div');
-    socialDiv.id = 'social';
-    socialDiv.classList = 'social';
-    app.mainElement.appendChild(socialDiv);
+    const socialContainer = document.createElement('div');
+    socialContainer.id = 'social';
+    socialContainer.classList = 'social';
+    app.mainElement.appendChild(socialContainer);
+    // paragraph
+    const textParagraph = document.createElement('p');
+    textParagraph.classList = 'social-paragraph';
+    textParagraph.textContent = data.social.text;
+    socialContainer.appendChild(textParagraph);
     // title
     const socialTitle = document.createElement('h5');
     socialTitle.textContent = "Parlons-en !";
-    socialDiv.appendChild(socialTitle);
-    // text
-    const textParagraph = document.createElement('p');
-    textParagraph.classList = 'social-hashtags';
-    textParagraph.innerHTML = data.social.text;
-    socialDiv.appendChild(textParagraph);
-
-    // container links (logo buttons)
-    const linksDiv = document.createElement('div');
-    linksDiv.classList = 'social-links';
+    socialContainer.appendChild(socialTitle);
+    // container links
+    const cardsContainer = document.createElement('div');
+    cardsContainer.classList = 'social-links';
     // cards : social networks loop
     const socialData = data.social.socialnetworks;
+    // loop data
     socialData.forEach(item => {
       // container
-      const socialDiv = document.createElement('div');
-      socialDiv.classList = 'social-links-card';
-      // image
-      const socialLogo = document.createElement('img');
-      socialLogo.src = item.image;
-      socialLogo.alt = `Lien ${item.title}`;
-      // link
-      const socialButton = document.createElement('a');
-      socialButton.href = item.url;
-      socialButton.target = "_blank";
-      socialButton.rel = "noopener noreferrer";
-      // hashtag
-      const hashtagSpan = document.createElement('h6');
-      hashtagSpan.id = item.title;
-      hashtagSpan.textContent = item.hashtag;
-      // append childs
-      socialDiv.appendChild(socialButton);
-      socialButton.appendChild(socialLogo);
-      socialDiv.appendChild(hashtagSpan);
-      linksDiv.appendChild(socialDiv);
+      const card = document.createElement('div');
+      card.classList = 'social-links-card';
+      cardsContainer.appendChild(card);
+
+      // image link
+      const imageLink = document.createElement('a');
+      imageLink.href = item.url;
+      imageLink.target = "_blank";
+      imageLink.rel = "noopener noreferrer";
+      card.appendChild(imageLink);
+      // image logo
+      const image = document.createElement('img');
+      image.classList = 'social-links-card-image';
+      image.id = `social-links-card-image--${item.title}`;
+      image.src = data.icons.clean;
+      image.alt = `Lien ${item.title}`;
+      imageLink.appendChild(image);
+
+      // title link
+      const titleLink = document.createElement('a');
+      titleLink.href = item.url;
+      titleLink.target = "_blank";
+      titleLink.rel = "noopener noreferrer";
+      card.appendChild(titleLink);
+
+      // title hashtag
+      const title = document.createElement('h6');
+      title.textContent = item.hashtagtitle;
+      titleLink.appendChild(title);
+      // hashtags
+      const hashtagsSpan = document.createElement('p');
+      hashtagsSpan.classList = 'social-links-card-hashtags';
+      hashtagsSpan.innerHTML = item.hashtags;
+      card.appendChild(hashtagsSpan);
     });
-    // append childs
-    socialDiv.appendChild(linksDiv);
+    // append child
+    socialContainer.appendChild(cardsContainer);
   },
 
   /**
