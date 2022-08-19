@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   width="24"
-   height="24"
-   viewBox="0 0 24 24"
+   width="250"
+   height="187.5"
+   viewBox="0 0 250 187.5"
    version="1.1"
    id="svg200"
    sodipodi:docname="social-mail-hover.svg"
-   inkscape:version="1.2.1 (ef4d3fba62, 2022-07-19, custom)"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -23,17 +23,22 @@
      inkscape:pagecheckerboard="1"
      inkscape:deskcolor="#505050"
      showgrid="false"
-     inkscape:zoom="33.875"
-     inkscape:cx="11.911439"
-     inkscape:cy="12"
+     inkscape:zoom="1.4970776"
+     inkscape:cx="179.01543"
+     inkscape:cy="-52.43549"
      inkscape:window-width="1854"
      inkscape:window-height="1016"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg200" />
+     inkscape:current-layer="svg200"
+     inkscape:pageshadow="0"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
   <path
-     d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"
+     d="M 0,0 V 187.5 H 250 V 0 Z M 224.14583,20.833333 125,101.17708 25.854167,20.833333 Z M 20.833333,166.66667 V 43.572917 L 125,127.98958 229.16667,43.572917 V 166.66667 Z"
      id="path198"
-     style="fill:#f5f5f5;fill-opacity:1" />
+     style="fill:#f5f5f5;fill-opacity:1;stroke-width:10.4167" />
 </svg>

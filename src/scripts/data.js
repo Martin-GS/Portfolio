@@ -27,6 +27,7 @@ const data = {
         title: "linkedin",
         url: "https://www.linkedin.com/in/martings",
         image: "./assets/images/social-linkedin.svg",
+        imagehover: "./assets/images/social-linkedin-hover.svg",
         hashtagtitle: "#pro",
         hashtags: "#CV<br /> #job"
       },
@@ -34,6 +35,7 @@ const data = {
         title: "twitter",
         url: "https://twitter.com/__martin_gs__",
         image: "./assets/images/social-twitter.svg",
+        imagehover: "./assets/images/social-twitter-hover.svg",
         hashtagtitle: "#tech",
         hashtags: "#code<br /> #dev"
       },
@@ -41,6 +43,7 @@ const data = {
         title: "instagram",
         url: "https://www.instagram.com/__martin.gs__",
         image: "./assets/images/social-instagram.svg",
+        imagehover: "./assets/images/social-instagram-hover.svg",
         hashtagtitle: "#perso",
         hashtags: "#photo<br /> #lifeStyle"
       },
@@ -48,6 +51,7 @@ const data = {
         title: "github",
         url: "https://github.com/Martin-GS",
         image: "./assets/images/social-github.svg",
+        imagehover: "./assets/images/social-github-hover.svg",
         hashtagtitle: "#repo",
         hashtags: "#projects<br /> #versioning"
       },
@@ -55,6 +59,7 @@ const data = {
         title: "mail",
         url: "mailto:portfolio@martin.gs",
         image: "./assets/images/social-mail.svg",
+        imagehover: "./assets/images/social-mail-hover.svg",
         hashtagtitle: "#mail",
         hashtags: "#contact<br /> #courriel"
       }

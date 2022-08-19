@@ -36,6 +36,7 @@ const app = {
     const resumeIcon = document.createElement('img');
     resumeIcon.classList = 'header-navbar-resume-icon';
     resumeIcon.alt = 'Résumé (à propos)';
+    resumeIcon.title = 'À propos';
     resumeIcon.src = data.icons.clean;
     // item : résumé ---> add link
     const resumeLink = document.createElement('a');
@@ -50,6 +51,7 @@ const app = {
     const socialIcon = document.createElement('img');
     socialIcon.classList = 'header-navbar-social-icon';
     socialIcon.alt = 'Contactez-moi (réseaux sociaux)';
+    socialIcon.title = 'Réseaux sociaux';
     socialIcon.src = data.icons.clean;
     // item : social ---> add link
     const socialLink = document.createElement('a');
@@ -64,6 +66,7 @@ const app = {
     const projectsIcon = document.createElement('img');
     projectsIcon.classList = 'header-navbar-projects-icon';
     projectsIcon.alt = 'Mes projets personnels (et leurs liens)';
+    projectsIcon.title = 'Projets';
     projectsIcon.src = data.icons.clean;
     // item : projects ---> add link
     const projectsLink = document.createElement('a');
@@ -191,7 +194,6 @@ const app = {
       const card = document.createElement('div');
       card.classList = 'social-links-card';
       cardsContainer.appendChild(card);
-
       // image link
       const imageLink = document.createElement('a');
       imageLink.href = item.url;
@@ -203,16 +205,15 @@ const app = {
       image.classList = 'social-links-card-image';
       image.id = `social-links-card-image--${item.title}`;
       image.src = data.icons.clean;
-      image.alt = `Lien ${item.title}`;
+      image.alt = `Bouton ${item.title}`;
+      image.title = `${item.title}`;
       imageLink.appendChild(image);
-
       // title link
       const titleLink = document.createElement('a');
       titleLink.href = item.url;
       titleLink.target = "_blank";
       titleLink.rel = "noopener noreferrer";
       card.appendChild(titleLink);
-
       // title hashtag
       const title = document.createElement('h6');
       title.textContent = item.hashtagtitle;
@@ -256,6 +257,7 @@ const app = {
     //   cardLogo.classList = 'projects-card-logo';
     //   cardLogo.src = item.image;
     //   cardLogo.alt = `Logo ${item.title}`;
+    //   cardLogo.title = `Logo ${item.title}`;
     //   cardDiv.appendChild(cardLogo);
     //   // title
     //   const cardTitle = document.createElement('h6');
@@ -313,6 +315,7 @@ const app = {
     image.classList = 'backtotop-image';
     image.src = data.icons.clean;
     image.alt = 'Revenir en haut de la page';
+    image.title = 'Revenir en haut de la page';
     link.appendChild(image);
   },
 
