@@ -258,10 +258,17 @@ const app = {
       card.classList = 'projects-cards--card';
       card.id = `projects-cards--card-${item.title}`;
       cardsContainer.appendChild(card);
+      // preview
+      const preview = document.createElement('img');
+      preview.classList = 'projects-cards--card-preview';
+      preview.src = item.preview;
+      preview.alt = `Capture d'écran ${item.title}`;
+      preview.title = `Capture d'écran ${item.title}`;
+      card.appendChild(preview);
       // logo
       const logo = document.createElement('img');
       logo.classList = 'projects-cards--card-logo';
-      logo.src = item.image;
+      logo.src = item.logo;
       logo.alt = `Logo ${item.title}`;
       logo.title = item.title;
       card.appendChild(logo);

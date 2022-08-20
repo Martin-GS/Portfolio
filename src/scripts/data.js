@@ -68,7 +68,8 @@ const data = {
   projects: [
     {
       title: "Portfolio",
-      image: "./assets/images/projects-portfolio.svg",
+      logo: "./assets/images/projects-portfolio.svg",
+      preview: "./assets/images/projects-portfolio-preview.png",
       description: "<strong>Description</strong> :<br /> Mon portfolio développé en <i>vanilla JavaScript</i>.",
       technos: "<strong>Technos</strong> :<br /> HTML, CSS, JavaScript",
       status: "<strong>Status</strong> :<br /> v1 finalisée et déployée",
@@ -79,7 +80,8 @@ const data = {
     },
     {
       title: "ToDo.js",
-      image: "./assets/images/projects-todojs.svg",
+      logo: "./assets/images/projects-todojs.svg",
+      preview: "./assets/images/projects-todojs-preview.png",
       description: "<strong>Description</strong> :<br /> <i>To-do-list</i> développé en <i>vanilla JavaScript</i>.",
       technos: "<strong>Technos</strong> :<br /> HTML, CSS, JavaScript",
       status: "<strong>Status</strong> :<br /> v1 finalisée et déployée",
@@ -90,7 +92,8 @@ const data = {
     },
     {
       title: "WishList",
-      image: "./assets/images/projects-wishlist.svg",
+      logo: "./assets/images/projects-wishlist.svg",
+      preview: "./assets/images/projects-wishlist-preview.png",
       description: "<strong>Description</strong> :<br /> <i>Wish-list</i> permettant d'importer les images depuis les sites marchands.",
       technos: "<strong>Technos</strong> :<br /> HTML, CSS, JavaScript, React, Bootstrap, Sass/SCSS, etc.",
       status: "<strong>Status</strong> :<br /> v3 finalisée et déployée",
@@ -101,7 +104,8 @@ const data = {
     },
     {
       title: "inicio",
-      image: "./assets/images/projects-inicio.svg",
+      logo: "./assets/images/projects-inicio.svg",
+      preview: "./assets/images/projects-inicio-preview.png",
       description: "<strong>Description</strong> :<br /> Page d'accueil personnalisable pour navigateur web.",
       technos: "<strong>Technos</strong> :<br /> HTML, CSS, JavaScript, React, Redux, Sass/SCSS, Strapi, etc.",
       status: "<strong>Status</strong> :<br /> en cours de développement",
@@ -112,7 +116,8 @@ const data = {
     },
     {
       title: "DevStack",
-      image: "./assets/images/projects-devstack.svg",
+      logo: "./assets/images/projects-devstack.svg",
+      preview: "./assets/images/projects-devstack-preview.png",
       description: "<strong>Description</strong> :<br /> Mon carnet de notes de développement web et mobile.",
       technos: "<strong>Technos</strong> :<br /> HTML, CSS, JavaScript",
       status: "<strong>Status</strong> :<br /> v1 finalisée et déployée",
