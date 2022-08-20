@@ -285,7 +285,14 @@ const app = {
       const technos = document.createElement('p');
       technos.innerHTML = item.technos;
       card.appendChild(technos);
-
+      // status
+      const status = document.createElement('p');
+      status.innerHTML = item.status;
+      card.appendChild(status);
+      // liens (title)
+      const linksTitle = document.createElement('p');
+      linksTitle.innerHTML = "<strong>Liens</strong> :";
+      card.appendChild(linksTitle);
       // links container
       const linksContainer = document.createElement('div');
       linksContainer.classList = 'projects-cards--card-links';
