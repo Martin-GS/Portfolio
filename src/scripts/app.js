@@ -246,15 +246,27 @@ const app = {
     description.classList = 'projects-description';
     description.textContent = "Voici une liste (non exhaustive) de mes projets personnels, leurs description, les liens ves les sites respectifs et leurs dépôts GitHub.";
     projectsContainer.appendChild(description);
-    // cards container
+    // cards container = "slideshow-container"
     const cardsContainer = document.createElement('div');
     cardsContainer.classList = 'projects-cards';
     projectsContainer.appendChild(cardsContainer);
+    // previous and next buttons
+    const previousButton = document.createElement('div');
+    previousButton.id = 'previousSlide';
+    previousButton.textContent = '❮';
+    previousButton.addEventListener('click', event => { slidesTotal(-1); });
+    cardsContainer.appendChild(previousButton);
+    const nextButton = document.createElement('div');
+    nextButton.id = 'nextSlide';
+    nextButton.textContent = '❯';
+    nextButton.addEventListener('click', event => { slidesTotal(1); });
+    cardsContainer.appendChild(nextButton);
     // loop
     const projectsData = data.projects;
     projectsData.forEach(item => {
       // card-div
       const card = document.createElement('div');
+      // ------------------------------------------------------- projects-cards--card === mySlides
       card.classList = 'projects-cards--card';
       card.id = `projects-cards--card-${item.title}`;
       cardsContainer.appendChild(card);
@@ -304,7 +316,6 @@ const app = {
       const linksContainer = document.createElement('div');
       linksContainer.classList = 'projects-cards--card-links';
       card.appendChild(linksContainer);
-
       // link to website
       // link to website : anchor
       const linkWebsite = document.createElement('a');
@@ -319,7 +330,6 @@ const app = {
       linkWebsiteImage.src = data.icons.clean;
       linkWebsiteImage.alt = `Lien vers le site ${item.title}`;
       linkWebsite.appendChild(linkWebsiteImage);
-
       // link to repository : anchor
       const linkRepository = document.createElement('a');
       linkRepository.classList = 'projects-cards--card-links--linkrepository--anchor';
@@ -334,6 +344,38 @@ const app = {
       linkRepositoryImage.alt = `Icône et lien vers le répertoire GitHub du projet ${item.title} `;
       linkRepository.appendChild(linkRepositoryImage);
     });
+
+    // Slideshow projects (carrousel)
+
+    // get cards array
+    let slides = document.getElementsByClassName("projects-cards--card");
+
+    // display first project
+    slides[0].style.display = "block";
+
+    let slideIndex = 1;
+
+    function slidesTotal(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+      let index;
+
+      // infinite slideshow
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+
+      // hide all projects
+      for (index = 0; index < slides.length; index++) {
+        slides[index].style.display = "none";
+      }
+
+      // display a project
+      slides[slideIndex - 1].style.display = "block";
+
+    }
+
   },
 
   /**

@@ -57,7 +57,7 @@ const data = {
       },
       {
         title: "mail",
-        url: "mailto:portfolio@martin.gs",
+        url: "mailto:mail@martin.gs",
         image: "./assets/images/social-mail.svg",
         imagehover: "./assets/images/social-mail-hover.svg",
         hashtagtitle: "#mail",
