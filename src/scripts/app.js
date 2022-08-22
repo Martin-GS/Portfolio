@@ -83,15 +83,10 @@ const app = {
   footer: function () {
     // container
     const footerElement = document.createElement('footer');
-    // image
-    const vanillaJsImage = document.createElement('img');
-    vanillaJsImage.classList = 'footer-image';
-    vanillaJsImage.src = data.icons.vanillajs;
-    footerElement.appendChild(vanillaJsImage);
     // text
     const thisYear = new Date().getFullYear();
     const textSpan = document.createElement('span');
-    textSpan.textContent = ` • Martin GS • 2020-${thisYear}`;
+    textSpan.textContent = `Martin GS • 2020-${thisYear} • Tous droits réservés`;
     footerElement.appendChild(textSpan);
     app.containerDiv.appendChild(footerElement);
   },
@@ -168,7 +163,6 @@ const app = {
    * "social": social network links
   */
   social: function () {
-
     // container
     const socialContainer = document.createElement('div');
     socialContainer.id = 'social';
@@ -232,29 +226,24 @@ const app = {
    *  "projects" : cards-presentation of projects and links
   */
   projects: function () {
-
     // container
     const projectsContainer = document.createElement('div');
     projectsContainer.id = 'projects';
     projectsContainer.classList = 'projects';
     app.mainElement.appendChild(projectsContainer);
-
     // title
     const projectsTitle = document.createElement('h5');
     projectsTitle.textContent = "Projets personnels";
     projectsContainer.appendChild(projectsTitle);
-
     // description
     const description = document.createElement('p');
     description.classList = 'projects-description';
     description.textContent = "Voici une liste (non exhaustive) de mes projets personnels.";
     projectsContainer.appendChild(description);
-
     // cards container = "slideshow-container"
     const cardsContainer = document.createElement('div');
     cardsContainer.classList = 'projects-cards';
     projectsContainer.appendChild(cardsContainer);
-
     // previous and next buttons
     // previous button
     const previousButton = document.createElement('div');
@@ -268,26 +257,21 @@ const app = {
     nextButton.textContent = '❯';
     nextButton.addEventListener('click', event => { slidesTotal(1); });
     cardsContainer.appendChild(nextButton);
-
     // loop : projects-cards--card = slide
     const projectsData = data.projects;
     projectsData.forEach(item => {
-
       // card container "display"
       const cardDisplay = document.createElement('div');
       cardDisplay.classList = 'projects-cards--carddisplay';
       cardsContainer.appendChild(cardDisplay);
-
       // card container
       const card = document.createElement('div');
       card.classList = 'projects-cards--card';
       cardDisplay.appendChild(card);
-
       // preview : container
       const previewContainer = document.createElement('div');
       previewContainer.classList = 'projects-cards--card-preview';
       card.appendChild(previewContainer);
-
       // logo
       const logo = document.createElement('img');
       logo.classList = 'projects-cards--card-preview-logo';
@@ -295,7 +279,6 @@ const app = {
       logo.alt = `Logo ${item.title}`;
       logo.title = item.title;
       previewContainer.appendChild(logo);
-
       // roject title
       const previewProjectTitle = document.createElement('p');
       previewProjectTitle.innerHTML = "<strong>Projet :</strong>";
@@ -311,9 +294,9 @@ const app = {
       title.classList = 'projects-cards--card-preview-title';
       title.textContent = item.title;
       linkTitle.appendChild(title);
-
       // preview screen
       const previewScreenTitle = document.createElement('p');
+      previewScreenTitle.classList = 'projects-cards--card-preview-imageTitle';
       previewScreenTitle.innerHTML = "<strong>Capture d'écran :</strong>";
       previewContainer.appendChild(previewScreenTitle);
       const previewImage = document.createElement('img');
@@ -322,12 +305,10 @@ const app = {
       previewImage.alt = `Capture d'écran ${item.title}`;
       previewImage.title = `Capture d'écran ${item.title}`;
       previewContainer.appendChild(previewImage);
-
       // card content
       const contentContainer = document.createElement('div');
       contentContainer.classList = 'projects-cards--card-content';
       card.appendChild(contentContainer);
-
       // description
       const description = document.createElement('p');
       description.innerHTML = item.description;
@@ -344,7 +325,6 @@ const app = {
       const linksTitle = document.createElement('p');
       linksTitle.innerHTML = "<strong>Liens :</strong>";
       contentContainer.appendChild(linksTitle);
-
       // links container
       const linksContainer = document.createElement('div');
       linksContainer.classList = 'projects-cards--card-content-links';
