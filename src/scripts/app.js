@@ -232,114 +232,145 @@ const app = {
    *  "projects" : cards-presentation of projects and links
   */
   projects: function () {
+
     // container
     const projectsContainer = document.createElement('div');
     projectsContainer.id = 'projects';
     projectsContainer.classList = 'projects';
     app.mainElement.appendChild(projectsContainer);
+
     // title
     const projectsTitle = document.createElement('h5');
     projectsTitle.textContent = "Projets personnels";
     projectsContainer.appendChild(projectsTitle);
+
     // description
     const description = document.createElement('p');
     description.classList = 'projects-description';
-    description.textContent = "Voici une liste (non exhaustive) de mes projets personnels, leurs description, les liens ves les sites respectifs et leurs dépôts GitHub.";
+    description.textContent = "Voici une liste (non exhaustive) de mes projets personnels.";
     projectsContainer.appendChild(description);
+
     // cards container = "slideshow-container"
     const cardsContainer = document.createElement('div');
     cardsContainer.classList = 'projects-cards';
     projectsContainer.appendChild(cardsContainer);
+
     // previous and next buttons
+    // previous button
     const previousButton = document.createElement('div');
     previousButton.id = 'previousSlide';
     previousButton.textContent = '❮';
     previousButton.addEventListener('click', event => { slidesTotal(-1); });
     cardsContainer.appendChild(previousButton);
+    // next button
     const nextButton = document.createElement('div');
     nextButton.id = 'nextSlide';
     nextButton.textContent = '❯';
     nextButton.addEventListener('click', event => { slidesTotal(1); });
     cardsContainer.appendChild(nextButton);
-    // loop
+
+    // loop : projects-cards--card = slide
     const projectsData = data.projects;
     projectsData.forEach(item => {
-      // card-div
+
+      // card container "display"
+      const cardDisplay = document.createElement('div');
+      cardDisplay.classList = 'projects-cards--carddisplay';
+      cardsContainer.appendChild(cardDisplay);
+
+      // card container
       const card = document.createElement('div');
-      // ------------------------------------------------------- projects-cards--card === mySlides
       card.classList = 'projects-cards--card';
-      card.id = `projects-cards--card-${item.title}`;
-      cardsContainer.appendChild(card);
-      // preview
-      const preview = document.createElement('img');
-      preview.classList = 'projects-cards--card-preview';
-      preview.src = item.preview;
-      preview.alt = `Capture d'écran ${item.title}`;
-      preview.title = `Capture d'écran ${item.title}`;
-      card.appendChild(preview);
+      cardDisplay.appendChild(card);
+
+      // preview : container
+      const previewContainer = document.createElement('div');
+      previewContainer.classList = 'projects-cards--card-preview';
+      card.appendChild(previewContainer);
+
       // logo
       const logo = document.createElement('img');
-      logo.classList = 'projects-cards--card-logo';
+      logo.classList = 'projects-cards--card-preview-logo';
       logo.src = item.logo;
       logo.alt = `Logo ${item.title}`;
       logo.title = item.title;
-      card.appendChild(logo);
+      previewContainer.appendChild(logo);
+
+      // roject title
+      const previewProjectTitle = document.createElement('p');
+      previewProjectTitle.innerHTML = "<strong>Projet :</strong>";
+      previewContainer.appendChild(previewProjectTitle);
       // title link
       const linkTitle = document.createElement('a');
-      linkTitle.classList = 'projects-cards--card-anchor';
       linkTitle.href = item.url_website;
       linkTitle.target = "_blank";
       linkTitle.rel = "noopener noreferrer";
-      card.appendChild(linkTitle);
+      previewContainer.appendChild(linkTitle);
       // title text
       const title = document.createElement('h6');
-      title.classList = 'projects-cards--card-title';
+      title.classList = 'projects-cards--card-preview-title';
       title.textContent = item.title;
       linkTitle.appendChild(title);
+
+      // preview screen
+      const previewScreenTitle = document.createElement('p');
+      previewScreenTitle.innerHTML = "<strong>Capture d'écran :</strong>";
+      previewContainer.appendChild(previewScreenTitle);
+      const previewImage = document.createElement('img');
+      previewImage.classList = 'projects-cards--card-preview-image';
+      previewImage.src = item.preview;
+      previewImage.alt = `Capture d'écran ${item.title}`;
+      previewImage.title = `Capture d'écran ${item.title}`;
+      previewContainer.appendChild(previewImage);
+
+      // card content
+      const contentContainer = document.createElement('div');
+      contentContainer.classList = 'projects-cards--card-content';
+      card.appendChild(contentContainer);
+
       // description
       const description = document.createElement('p');
       description.innerHTML = item.description;
-      card.appendChild(description);
+      contentContainer.appendChild(description);
       // technos
       const technos = document.createElement('p');
       technos.innerHTML = item.technos;
-      card.appendChild(technos);
+      contentContainer.appendChild(technos);
       // status
       const status = document.createElement('p');
       status.innerHTML = item.status;
-      card.appendChild(status);
+      contentContainer.appendChild(status);
       // liens (title)
       const linksTitle = document.createElement('p');
-      linksTitle.innerHTML = "<strong>Liens</strong> :";
-      card.appendChild(linksTitle);
+      linksTitle.innerHTML = "<strong>Liens :</strong>";
+      contentContainer.appendChild(linksTitle);
+
       // links container
       const linksContainer = document.createElement('div');
-      linksContainer.classList = 'projects-cards--card-links';
-      card.appendChild(linksContainer);
+      linksContainer.classList = 'projects-cards--card-content-links';
+      contentContainer.appendChild(linksContainer);
       // link to website
       // link to website : anchor
       const linkWebsite = document.createElement('a');
-      linkWebsite.classList = 'projects-cards--card-links--linkwebsite--anchor';
       linkWebsite.href = item.url_website;
       linkWebsite.target = "_blank";
       linkWebsite.rel = "noopener noreferrer";
       linksContainer.appendChild(linkWebsite);
       // link to website : image
       const linkWebsiteImage = document.createElement('img');
-      linkWebsiteImage.classList = 'projects-cards--card-links--linkwebsite--image';
+      linkWebsiteImage.classList = 'projects-cards--card-content-links--linkwebsite--image';
       linkWebsiteImage.src = data.icons.clean;
       linkWebsiteImage.alt = `Lien vers le site ${item.title}`;
       linkWebsite.appendChild(linkWebsiteImage);
       // link to repository : anchor
       const linkRepository = document.createElement('a');
-      linkRepository.classList = 'projects-cards--card-links--linkrepository--anchor';
       linkRepository.href = item.url_repository;
       linkRepository.target = "_blank";
       linkRepository.rel = "noopener noreferrer";
       linksContainer.appendChild(linkRepository);
       // link to repository : image
       const linkRepositoryImage = document.createElement('img');
-      linkRepositoryImage.classList = 'projects-cards--card-links--linkrepository--image';
+      linkRepositoryImage.classList = 'projects-cards--card-content-links--linkrepository--image';
       linkRepositoryImage.src = data.icons.clean;
       linkRepositoryImage.alt = `Icône et lien vers le répertoire GitHub du projet ${item.title} `;
       linkRepository.appendChild(linkRepositoryImage);
@@ -348,7 +379,7 @@ const app = {
     // Slideshow projects (carrousel)
 
     // get cards array
-    let slides = document.getElementsByClassName("projects-cards--card");
+    let slides = document.getElementsByClassName("projects-cards--carddisplay");
 
     // display first project
     slides[0].style.display = "block";
@@ -373,7 +404,6 @@ const app = {
 
       // display a project
       slides[slideIndex - 1].style.display = "block";
-
     }
 
   },
