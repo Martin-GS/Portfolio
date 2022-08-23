@@ -80,6 +80,15 @@ h6 {
 
 /* ---------- HEADER ---------- */
 
+/* phantom header */
+
+/* Mobile */
+@media only screen and (max-width: 767px) {
+  #top {
+    height: 55px;
+  }
+}
+
 header {
   width: 100%;
   height: 50px;
@@ -104,14 +113,14 @@ header {
 /* Tablet */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   header {
-    padding: 0 3em;
+    padding: 0 2em;
   }
 }
 
 /* Desktop */
 @media only screen and (min-width: 960px) {
   header {
-    padding: 0 6em;
+    padding: 0 4em;
   }
 }
 
@@ -176,6 +185,7 @@ h5 {
 /*  MAIN : about */
 
 .about {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -184,24 +194,21 @@ h5 {
 /* Mobile */
 @media only screen and (max-width: 767px) {
   .about {
-    height: 100%;
-    padding: 5em 1.5em 2em 1.5em;
+    padding: 0 0.5em;
   }
 }
 
 /* Tablet */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   .about {
-    height: 100vh;
-    padding: 2em 3em;
+    padding: 0 2em;
   }
 }
 
 /* Desktop */
 @media only screen and (min-width: 960px) {
   .about {
-    height: 100vh;
-    padding: 0 6em;
+    padding: 0 4em;
   }
 }
 
@@ -259,25 +266,22 @@ h4 {
 /* Mobile */
 @media only screen and (max-width: 767px) {
   h2 {
-    font-size: 1.7rem;
-    line-height: 1.5em;
+    font-size: 1.3rem;
+    margin-bottom: 0.3em;
   }
 
   h3 {
-    font-size: 1.5rem;
-    line-height: 1.2em;
+    font-size: 1.3rem;
     margin-bottom: 0.3em;
   }
 
   h4 {
-    font-size: 1.5rem;
-    line-height: 1.2em;
-    margin-bottom: 0.3em;
+    font-size: 1.3rem;
+    margin-bottom: 0.5em;
   }
 
   #about-location {
     font-size: 1.1rem;
-    line-height: 1.4em;
   }
 }
 
@@ -341,6 +345,7 @@ h4 {
 /*  MAIN : social */
 
 .social {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -349,24 +354,21 @@ h4 {
 /* Mobile */
 @media only screen and (max-width: 767px) {
   .social {
-    height: 100%;
-    padding: 2em 1.5em;
+    padding: 0 0.5em;
   }
 }
 
 /* Tablet */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   .social {
-    height: 100%;
-    padding: 2em 3em;
+    padding: 0 2em;
   }
 }
 
 /* Desktop */
 @media only screen and (min-width: 960px) {
   .social {
-    height: 100vh;
-    padding: 0 6em;
+    padding: 0 4em;
   }
 }
 
@@ -467,6 +469,7 @@ h4 {
 /*  MAIN : projects */
 
 .projects {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -475,48 +478,27 @@ h4 {
 /* Mobile */
 @media only screen and (max-width: 767px) {
   .projects {
-    height: 100%;
-    padding: 2em 1.5em;
+    padding: 0 0.5em;
   }
 }
 
 /* Tablet */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   .projects {
-    height: 100%;
-    padding: 2em 3em;
+    padding: 0 2em;
   }
 }
 
 /* Desktop */
 @media only screen and (min-width: 960px) {
   .projects {
-    height: 100vh;
-    padding: 0 6em;
+    padding: 0 4em;
   }
 }
 
 /* Project description */
-
-/* Mobile */
-@media only screen and (max-width: 767px) {
-  .projects-description {
-    display: none;
-  }
-}
-
-/* Tablet */
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-  .projects-description {
-    display: none;
-  }
-}
-
-/* Desktop */
-@media only screen and (min-width: 960px) {
-  .projects-description {
-    text-align: center;
-  }
+.projects-description {
+  display: none;
 }
 
 /* cards container = "slideshow-container" */
@@ -544,7 +526,7 @@ h4 {
   .projects-cards--card {
     display: flex;
     flex-direction: column;
-    margin: 1.2em;
+    margin: 1em;
     padding: 0.5em;
   }
 }
@@ -581,48 +563,23 @@ h4 {
 
 /* preview container */
 .projects-cards--card-preview {
+  padding: 1.1em;
   position: relative;
 }
 
 /* Mobile */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 959px) {
   .projects-cards--card-preview {
-    padding: 1.1em 1.1em 0em 1.1em;
-  }
-}
-
-/* Tablet */
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-  .projects-cards--card-preview {
-    padding: 1.1em 1.1em 0em 1.1em;
-  }
-}
-
-/* Desktop */
-@media only screen and (min-width: 960px) {
-  .projects-cards--card-preview {
-    padding: 1.1em;
+    padding: 1.1em 1.1em 0 1.1em;
   }
 }
 
 /* logo */
-
-/* Mobile */
-@media only screen and (max-width: 767px) {
-  .projects-cards--card-preview-logo {
-    width: 70px;
-    position: absolute;
-    right: 15px;
-  }
-}
-
-/* Tablet */
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-  .projects-cards--card-preview-logo {
-    width: 80px;
-    position: absolute;
-    right: 15px;
-  }
+.projects-cards--card-preview-logo {
+  width: 75px;
+  position: absolute;
+  top: 20px;
+  right: 15px;
 }
 
 /* Desktop */
@@ -640,16 +597,7 @@ h4 {
 }
 
 /* Mobile */
-@media only screen and (max-width: 767px) {
-
-  .projects-cards--card-preview-imageTitle,
-  .projects-cards--card-preview-image {
-    display: none;
-  }
-}
-
-/* Tablet */
-@media only screen and (min-width: 768px) and (max-width: 959px) {
+@media only screen and (max-width: 959px) {
 
   .projects-cards--card-preview-imageTitle,
   .projects-cards--card-preview-image {
@@ -663,6 +611,13 @@ h4 {
   padding: 1.1em;
 }
 
+/* Mobile */
+@media only screen and (max-width: 959px) {
+  .projects-cards--card-content {
+    padding: 0 1.1em 1.1em 1.1em;
+  }
+}
+
 /* project title */
 .projects-cards--card-content-title {
   display: inline-block;
@@ -671,12 +626,12 @@ h4 {
 .projects-cards--card-content-links {
   display: flex;
   flex-direction: row;
-  justify-content: center;
 }
 
 .projects-cards--card-content-links--linkwebsite--image {
   width: 35px;
-  margin: 0.5em 2em 0 2em;
+  margin-top: 0.5em;
+  margin-right: 1em;
   background: url(../assets/images/projects-link-externallink.svg) center / contain no-repeat;
 }
 
@@ -686,7 +641,8 @@ h4 {
 
 .projects-cards--card-content-links--linkrepository--image {
   width: 35px;
-  margin: 0.5em 2em 0 2em;
+  margin-top: 0.5em;
+  margin-left: 1em;
   background: url(../assets/images/projects-link-github.svg) center / contain no-repeat;
 }
 
@@ -758,8 +714,8 @@ footer {
 /* Mobile */
 @media only screen and (max-width: 767px) {
   .backtotop-container {
-    bottom: 2em;
-    right: 3em;
+    bottom: 1.8em;
+    right: 1.8em;
   }
 }
 
