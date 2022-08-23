@@ -16,7 +16,7 @@ const data = {
     position: "Développeur FullStack JavaScript",
     specialization: "Passionné par le Front-End et spécialisé React",
     location: "Hyères, Côte d'Azur, France",
-    resume: `<p>Issu d'une école des Beaux-Arts et d'une formation en Développement FullStack JavaScript, je suis passionné depuis mon plus jeune âge par l'art et les nouvelles technologies.</p><p>Je me suis spécialisé en développement Front-End ; métier qui a attiré tout particulièrement mon attention de par son aspect artisanal, combinant/associant savoir-faire, créativité et design).</p><p>En outre, ayant suivi une formation en développement FullStack, j'ai eu l'occasion de découvrir et travailler avec Node, Express, PostgreSQL, SQL, etc.</p>`,
+    resume: `<p>Issu d'une école des Beaux-Arts et d'une formation en Développement FullStack JavaScript, je suis passionné depuis mon plus jeune âge par l'art et les nouvelles technologies.</p><p>Je me suis spécialisé en développement Front-End, métier qui a attiré mon attention de par son aspect artisanal, associant technicité, créativité et design.</p><p>En outre, ayant suivi une formation en développement FullStack, j'ai eu l'occasion de découvrir et travailler avec Node, Express, PostgreSQL, SQL, etc.</p>`,
     portrait: "./assets/images/martings-portrait.jpg"
   },
   social: {

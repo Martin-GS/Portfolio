@@ -35,7 +35,7 @@
   src: url(../assets/fonts/FiraMono-Medium.ttf) format("truetype");
 }
 
-/* ---------- BODY & CONTAINER ---------- */
+/* ---------- HTML, BODY & CONTAINER ---------- */
 
 html {
   scroll-behavior: smooth;
@@ -68,26 +68,16 @@ a {
 }
 
 a:hover {
-  font-family: "Sans Medium", sans-serif;
   color: #f5f5f5;
 }
 
-/* cards titles (social and projects) */
+/* card title (social and project card titles) */
 h6 {
   font-family: 'Mono Regular', monospace;
   font-size: 1.2rem;
 }
 
 /* ---------- HEADER ---------- */
-
-/* phantom header */
-
-/* Mobile */
-@media only screen and (max-width: 767px) {
-  #top {
-    height: 55px;
-  }
-}
 
 header {
   width: 100%;
@@ -174,12 +164,12 @@ main {
   width: 100%;
 }
 
-/* MAIN : sections titles */
+/* sections titles */
 h5 {
   font-family: 'Mono Medium', monospace;
   font-size: 1.7rem;
-  color: #FFB454;
   text-align: center;
+  color: #FFB454;
 }
 
 /*  MAIN : about */
@@ -241,24 +231,25 @@ h5 {
   width: 100%;
 }
 
-/* MAIN : about : name */
+/* name */
 h2 {
   font-family: 'Mono Medium', monospace;
   color: #FFB454;
 }
 
-/* MAIN : about : position */
+/* position */
 h3 {
   font-family: 'Mono Medium', monospace;
   color: #F07178;
 }
 
-/* MAIN : about : specialization */
+/* specialization */
 h4 {
   font-family: 'Mono Medium', monospace;
   color: #AAD94C;
 }
 
+/* city */
 #about-location {
   font-family: 'Mono Regular', monospace;
 }
@@ -339,7 +330,7 @@ h4 {
 }
 
 .about-resume {
-  padding: 1em 0;
+  padding-top: 1em;
 }
 
 /*  MAIN : social */
@@ -387,7 +378,7 @@ h4 {
 /* Mobile */
 @media only screen and (max-width: 767px) {
   .social-cards {
-    gap: 3em;
+    gap: 2em;
   }
 }
 
@@ -461,6 +452,10 @@ h4 {
   background: url(../assets/images/social-mail-hover.svg) center / contain no-repeat;
 }
 
+.social-cards--card h6 {
+  margin-top: 1em;
+}
+
 .social-cards--card-hashtags {
   margin-top: 1em;
   text-align: center;
@@ -506,7 +501,7 @@ h4 {
   position: relative;
 }
 
-/* hidde project cards */
+/* slide : hidde project cards */
 .projects-cards--carddisplay {
   display: none;
 }
@@ -553,7 +548,7 @@ h4 {
 .projects-cards--card p {
   font-family: "Sans Regular", sans-serif;
   font-size: 1.1rem;
-  line-height: 1.4em;
+  line-height: 1.6em;
 }
 
 .projects p strong {
@@ -582,7 +577,7 @@ h4 {
   right: 15px;
 }
 
-/* Desktop */
+/* Hide logo in desktop mode */
 @media only screen and (min-width: 960px) {
   .projects-cards--card-preview-logo {
     display: none;
@@ -596,7 +591,7 @@ h4 {
   border-radius: 0.5em;
 }
 
-/* Mobile */
+/* Hide screenshot in mobile mode */
 @media only screen and (max-width: 959px) {
 
   .projects-cards--card-preview-imageTitle,
@@ -660,7 +655,7 @@ h4 {
   padding: 0.4em;
   background-color: #0D1017;
   transition: 0.6s ease;
-  border: solid 2px #f5f5f5;
+  border: solid 1px #f5f5f5;
   border-radius: 0 0.7em 0.7em 0;
   font-size: 20px;
   color: #F5F5F5;
@@ -677,7 +672,7 @@ h4 {
   padding: 0.5em;
   background-color: #0D1017;
   transition: 0.6s ease;
-  border: solid 2px #f5f5f5;
+  border: solid 1px #f5f5f5;
   border-radius: 0.7em 0 0 0.7em;
   font-size: 20px;
   color: #F5F5F5;
@@ -715,7 +710,7 @@ footer {
 @media only screen and (max-width: 767px) {
   .backtotop-container {
     bottom: 1.8em;
-    right: 1.8em;
+    right: 1em;
   }
 }
 
