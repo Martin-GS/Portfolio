@@ -279,7 +279,7 @@ const app = {
       logo.alt = `Logo ${item.title}`;
       logo.title = item.title;
       previewContainer.appendChild(logo);
-      // roject title
+      // project title
       const previewProjectTitle = document.createElement('p');
       previewProjectTitle.innerHTML = "<strong>Projet :</strong>";
       previewContainer.appendChild(previewProjectTitle);
