@@ -81,7 +81,7 @@ const data = {
       title: "ToDo.js",
       logo: "./assets/images/projects-todojs.svg",
       preview: "./assets/images/projects-todojs-preview.png",
-      description: "<strong>Description :</strong><br /> <i>To-do list</i>, développée en <i>vanilla JavaScript</i>.",
+      description: "<strong>Description :</strong><br /> <i>To-do list</i> (liste de tâches) développée en <i>vanilla JavaScript</i>.",
       technos: "<strong>Technos :</strong><br /> HTML, CSS, JavaScript",
       status: "<strong>Status :</strong><br /> v1 finalisée et déployée",
       url_website: "https://todo.martin.gs",

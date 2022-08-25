@@ -1,3 +1,5 @@
+![logo](./doc/martings-logo.png)
+
 # Martin GS • Portfolio
 
 ## Description
@@ -6,6 +8,8 @@ Déployé sur le domaine [martin.gs](https://martin.gs), ce **portfolio** affich
 
 Ce projeta a été développé *from scratch* en **vanilla JavaScript**.
 
-## Preview
+---
 
-![preview](../doc/preview.png)
+## Capture d'écran
+
+![preview](./doc/preview.png)
