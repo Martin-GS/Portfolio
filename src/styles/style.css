@@ -623,6 +623,29 @@ h4 {
   flex-direction: row;
 }
 
+a.plusdinfos {
+  position: relative;
+  bottom: 2px;
+  margin-left: 5px;
+  padding: 3px 5px;
+  background: #1a2130;
+  border: solid 1px #283146;
+  border-radius: 5px;
+  font-family: 'Mono Regular', monospace;
+  font-size: 0.7em;
+  color: #F5F5F5;
+}
+
+a.plusdinfos:hover {
+  background: #f5f5f5;
+  border: solid 1px #f5f5f5;
+  color: #1a2130;
+}
+
+button.plusdinfos a {
+  color: #F5F5F5;
+}
+
 .projects-cards--card-content-links--linkwebsite--image {
   width: 35px;
   margin-top: 0.5em;
