@@ -100,25 +100,18 @@ const app = {
     aboutContainer.id = 'about';
     aboutContainer.classList = 'about';
     app.mainElement.appendChild(aboutContainer);
-
     // phantom left div for large screens
     const phantomLeft = document.createElement('div');
     phantomLeft.classList = 'about-phantom';
     aboutContainer.appendChild(phantomLeft);
-
-
     // content
     const aboutContent = document.createElement('div');
     aboutContent.classList = 'about-content';
     aboutContainer.appendChild(aboutContent);
-
     // phantom right div for large screens
     const phantomRight = document.createElement('div');
     phantomRight.classList = 'about-phantom';
     aboutContainer.appendChild(phantomRight);
-
-
-
     // about-labels : titles AND portrait
     const labelsDiv = document.createElement('div');
     labelsDiv.classList = "about-labels";
@@ -250,19 +243,36 @@ const app = {
     projectsContainer.id = 'projects';
     projectsContainer.classList = 'projects';
     app.mainElement.appendChild(projectsContainer);
+
+    
+    // phantom left div for large screens
+    const phantomLeft = document.createElement('div');
+    phantomLeft.classList = 'projects-phantom';
+    projectsContainer.appendChild(phantomLeft);
+
+    // content
+    const projectsContent = document.createElement('div');
+    projectsContent.classList = 'projects-content';
+    projectsContainer.appendChild(projectsContent);
+
+    // phantom right div for large screens
+    const phantomRight = document.createElement('div');
+    phantomRight.classList = 'projects-phantom';
+    projectsContainer.appendChild(phantomRight);
+
     // title
     const projectsTitle = document.createElement('h5');
     projectsTitle.textContent = "Projets personnels";
-    projectsContainer.appendChild(projectsTitle);
+    projectsContent.appendChild(projectsTitle);
     // description
     const description = document.createElement('p');
     description.classList = 'projects-description';
     description.textContent = "Voici une liste (non exhaustive) de mes projets personnels.";
-    projectsContainer.appendChild(description);
+    projectsContent.appendChild(description);
     // cards container = "slideshow-container"
     const cardsContainer = document.createElement('div');
     cardsContainer.classList = 'projects-cards';
-    projectsContainer.appendChild(cardsContainer);
+    projectsContent.appendChild(cardsContainer);
     // previous and next buttons
     // previous button
     const previousButton = document.createElement('div');
