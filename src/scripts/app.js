@@ -100,10 +100,29 @@ const app = {
     aboutContainer.id = 'about';
     aboutContainer.classList = 'about';
     app.mainElement.appendChild(aboutContainer);
+
+    // phantom left div for large screens
+    const phantomLeft = document.createElement('div');
+    phantomLeft.classList = 'about-phantom';
+    aboutContainer.appendChild(phantomLeft);
+
+
+    // content
+    const aboutContent = document.createElement('div');
+    aboutContent.classList = 'about-content';
+    aboutContainer.appendChild(aboutContent);
+
+    // phantom right div for large screens
+    const phantomRight = document.createElement('div');
+    phantomRight.classList = 'about-phantom';
+    aboutContainer.appendChild(phantomRight);
+
+
+
     // about-labels : titles AND portrait
     const labelsDiv = document.createElement('div');
     labelsDiv.classList = "about-labels";
-    aboutContainer.appendChild(labelsDiv);
+    aboutContent.appendChild(labelsDiv);
     // portrait
     const portraitDiv = document.createElement('div');
     portraitDiv.classList = 'about-labels-portrait';
@@ -156,7 +175,7 @@ const app = {
     const resumeDiv = document.createElement('div');
     resumeDiv.classList = "about-resume";
     resumeDiv.innerHTML = data.about.resume;
-    aboutContainer.appendChild(resumeDiv);
+    aboutContent.appendChild(resumeDiv);
   },
 
   /**

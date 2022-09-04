@@ -177,8 +177,28 @@ h5 {
 .about {
   height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
+}
+
+/* Mobile */
+@media only screen and (max-width: 767px) {
+  .about-phantom {
+    display: none;
+  }
+}
+
+/* Tablet & Desktop */
+@media only screen and (min-width: 768px) {
+  .about-phantom {
+    width: 20%;
+  }
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
 }
 
 /* Mobile */
