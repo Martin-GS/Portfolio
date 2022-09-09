@@ -335,12 +335,13 @@ const app = {
       contentContainer.appendChild(status);
       // liens (title)
       const linksTitle = document.createElement('p');
+      linksTitle.classList = 'projects-cards--card-content-linksTitle';
       linksTitle.innerHTML = "<strong>Liens :</strong>";
       contentContainer.appendChild(linksTitle);
       // links container
       const linksContainer = document.createElement('div');
       linksContainer.classList = 'projects-cards--card-content-links';
-      contentContainer.appendChild(linksContainer);
+      linksTitle.appendChild(linksContainer);
       // link to website
       // link to website : anchor
       const linkWebsite = document.createElement('a');
