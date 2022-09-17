@@ -364,6 +364,7 @@ h4 {
 /*  MAIN : social */
 
 .social {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -379,7 +380,6 @@ h4 {
 /* Tablet */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   .social {
-    height: 100vh;
     padding: 0 2em;
   }
 }
@@ -387,7 +387,6 @@ h4 {
 /* Desktop */
 @media only screen and (min-width: 960px) {
   .social {
-    height: 100vh;
     padding: 0 4em;
   }
 }
