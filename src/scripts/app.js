@@ -10,7 +10,8 @@ const app = {
 
   phantom: function () {
     const div = document.createElement('div');
-    div.id = 'top';
+    // div.id = 'top';
+    div.id = 'about';
     app.containerDiv.appendChild(div);
   },
 
@@ -40,7 +41,8 @@ const app = {
     resumeIcon.src = data.icons.clean;
     // item : résumé ---> add link
     const resumeLink = document.createElement('a');
-    resumeLink.href = '#top';
+    // resumeLink.href = '#top';
+    resumeLink.href = '#about';
     resumeLink.appendChild(resumeIcon);
     resumeDiv.appendChild(resumeLink);
     // item : social
@@ -97,7 +99,6 @@ const app = {
   about: function () {
     // container
     const aboutContainer = document.createElement('div');
-    aboutContainer.id = 'about';
     aboutContainer.classList = 'about';
     app.mainElement.appendChild(aboutContainer);
     // phantom left div for large screens
@@ -409,7 +410,7 @@ const app = {
     backtotopContainer.classList = 'backtotop-container';
     app.containerDiv.appendChild(backtotopContainer);
     const link = document.createElement('a');
-    link.href = '#top';
+    link.href = '#about';
     backtotopContainer.appendChild(link);
     const image = document.createElement('img');
     image.classList = 'backtotop-image';
