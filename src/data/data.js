@@ -31,22 +31,6 @@ const data = {
         hashtags: "#CV<br /> #job"
       },
       {
-        title: "twitter",
-        url: "https://twitter.com/__martin_gs__",
-        image: "./assets/images/social-twitter.svg",
-        imagehover: "./assets/images/social-twitter-hover.svg",
-        hashtagtitle: "#tech",
-        hashtags: "#code<br /> #dev"
-      },
-      {
-        title: "instagram",
-        url: "https://www.instagram.com/__martin.gs__",
-        image: "./assets/images/social-instagram.svg",
-        imagehover: "./assets/images/social-instagram-hover.svg",
-        hashtagtitle: "#perso",
-        hashtags: "#photo<br /> #lifeStyle"
-      },
-      {
         title: "github",
         url: "https://github.com/Martin-GS",
         image: "./assets/images/social-github.svg",
