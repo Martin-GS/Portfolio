@@ -1,9 +1,4 @@
-/* ---------- IMPORT FONTS ---------- */
-
-@font-face {
-  font-family: "Sans Thin";
-  src: url(../assets/fonts/FiraSans-Thin.ttf) format("truetype");
-}
+/* ---------- FONTS ---------- */
 
 @font-face {
   font-family: "Sans Light";
@@ -16,16 +11,6 @@
 }
 
 @font-face {
-  font-family: "Sans Medium";
-  src: url(../assets/fonts/FiraSans-Medium.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: "Sans Bold";
-  src: url(../assets/fonts/FiraSans-Bold.ttf) format("truetype");
-}
-
-@font-face {
   font-family: "Mono Regular";
   src: url(../assets/fonts/FiraMono-Regular.ttf) format("truetype");
 }
@@ -35,7 +20,7 @@
   src: url(../assets/fonts/FiraMono-Medium.ttf) format("truetype");
 }
 
-/* ---------- HTML, BODY & CONTAINER ---------- */
+/* ---------- CONTAINERS ---------- */
 
 html {
   scroll-behavior: smooth;
@@ -56,15 +41,18 @@ body {
 /* ---------- TXT ---------- */
 
 p {
+  text-align: justify;
   margin: 0.7em 0;
-  font-size: 1rem;
-  line-height: 1.4rem;
+  font-size: 1.15rem;
+  line-height: 1.5rem;
 }
 
-p .emphasis {
-  font-family: "Sans Regular", sans-serif;
-  /* color: #FFB454; */
-  color: white;
+/* name : mobile */
+@media only screen and (max-width: 767px) {
+  p {
+    font-size: 1rem;
+    line-height: 1.40rem;
+  }
 }
 
 a {
@@ -102,7 +90,7 @@ header {
 /* Mobile */
 @media only screen and (max-width: 767px) {
   header {
-    padding: 0 0.5em;
+    padding: 0 0.75em;
   }
 }
 
@@ -181,6 +169,7 @@ h5 {
 /*  MAIN : about */
 
 .about {
+  height: 100vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -193,36 +182,27 @@ h5 {
 
 /* Mobile */
 @media only screen and (max-width: 767px) {
-
   .about {
-    height: 100%;
-    padding: 5em 0.5em 3em 0.5em;
+    padding: 0 0.75em;
   }
 
   .about-phantom {
     display: none;
   }
-
 }
 
 /* Tablet */
-@media only screen and (min-width: 768px) {
-
+@media only screen and (min-width: 768px) and (max-width: 959px) {
   .about {
-    height: 100vh;
     padding: 0 2em;
   }
-
 }
 
 /* Desktop */
-@media only screen and (min-width: 768px) {
-
+@media only screen and (min-width: 960px) {
   .about {
-    height: 100vh;
     padding: 0 4em;
   }
-
 }
 
 .about-content {
@@ -373,7 +353,7 @@ h4 {
 /* Mobile */
 @media only screen and (max-width: 767px) {
   .social {
-    padding: 3em 0.5em;
+    padding: 0 0.75em
   }
 }
 
@@ -440,26 +420,6 @@ h4 {
   background: url(../assets/images/social-linkedin-hover.svg) center / contain no-repeat;
 }
 
-#social-cards--card-image--twitter {
-  height: 50px;
-  background: url(../assets/images/social-twitter.svg) center / contain no-repeat;
-}
-
-#social-cards--card-image--twitter:hover {
-  height: 50px;
-  background: url(../assets/images/social-twitter-hover.svg) center / contain no-repeat;
-}
-
-#social-cards--card-image--instagram {
-  height: 50px;
-  background: url(../assets/images/social-instagram.svg) center / contain no-repeat;
-}
-
-#social-cards--card-image--instagram:hover {
-  height: 50px;
-  background: url(../assets/images/social-instagram-hover.svg) center / contain no-repeat;
-}
-
 #social-cards--card-image--github {
   height: 50px;
   background: url(../assets/images/social-github.svg) center / contain no-repeat;
@@ -492,6 +452,7 @@ h4 {
 /*  MAIN : projects */
 
 .projects {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -501,15 +462,21 @@ h4 {
 /* Mobile */
 @media only screen and (max-width: 767px) {
   .projects {
-    padding: 3em 0.5em 6em 0.5em;
+    padding: 0 0.75em;
   }
 }
 
-/* Tablet and Desktop */
-@media only screen and (min-width: 768px) {
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
   .projects {
-    height: 100vh;
     padding: 0 2em;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 960px) {
+  .projects {
+    padding: 0 4em;
   }
 }
 
