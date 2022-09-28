@@ -17,7 +17,7 @@ const data = {
     specialization: "Spécialisé Front-End • React",
     location: "Hyères, Var (83), Côte d'Azur, France",
     resume: `<p>Issu d'une école des Beaux-Arts et d'une formation en Développement FullStack (React/Node), je suis passionné depuis mon plus jeune âge par l'art et les nouvelles technologies.</p><p>Je me suis spécialisé dans le développement Front-End, métier qui a attiré mon attention de par son aspect artisanal, associant technicité, créativité et design.</p><p>Aujourd'hui je suis à l'écoute de nouvelles opportunités me permettant de travailler sur des projets challengeants et innovants, au sein d'une équipe dynamique et bienveillante.</p>`,
-    portrait: "./assets/images/martings-portrait.jpg"
+    portrait: "./assets/images/martings-portrait.png"
   },
   social: {
     text: "Envie de parler dév, tech et projets ?",
