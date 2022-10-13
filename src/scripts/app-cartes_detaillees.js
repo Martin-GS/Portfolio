@@ -272,24 +272,19 @@ const app = {
     cardsContainer.appendChild(nextButton);
     // loop : projects-cards--card = slide
     const projectsData = data.projects;
-
     projectsData.forEach(item => {
-
       // card container "display"
       const cardDisplay = document.createElement('div');
       cardDisplay.classList = 'projects-cards--carddisplay';
       cardsContainer.appendChild(cardDisplay);
-
       // card container
       const card = document.createElement('div');
       card.classList = 'projects-cards--card';
       cardDisplay.appendChild(card);
-
       // preview : container
       const previewContainer = document.createElement('div');
       previewContainer.classList = 'projects-cards--card-preview';
       card.appendChild(previewContainer);
-
       // logo
       const logo = document.createElement('img');
       logo.classList = 'projects-cards--card-preview-logo';
@@ -297,25 +292,21 @@ const app = {
       logo.alt = `Logo ${item.title}`;
       logo.title = item.title;
       previewContainer.appendChild(logo);
-
       // project title
       const previewProjectTitle = document.createElement('p');
       previewProjectTitle.innerHTML = "<strong>Projet :</strong>";
       previewContainer.appendChild(previewProjectTitle);
-
       // title link
       const linkTitle = document.createElement('a');
       linkTitle.href = item.url_website;
       linkTitle.target = "_blank";
       linkTitle.rel = "noopener noreferrer";
       previewContainer.appendChild(linkTitle);
-
       // title text
       const title = document.createElement('h6');
       title.classList = 'projects-cards--card-preview-title';
       title.textContent = item.title;
       linkTitle.appendChild(title);
-
       // preview screen
       const previewScreenTitle = document.createElement('p');
       previewScreenTitle.classList = 'projects-cards--card-preview-imageTitle';
@@ -327,63 +318,56 @@ const app = {
       previewImage.alt = `Capture d'écran ${item.title}`;
       previewImage.title = `Capture d'écran ${item.title}`;
       previewContainer.appendChild(previewImage);
-
       // card content
       const contentContainer = document.createElement('div');
       contentContainer.classList = 'projects-cards--card-content';
       card.appendChild(contentContainer);
-
       // description
       const description = document.createElement('p');
       description.innerHTML = item.description;
       contentContainer.appendChild(description);
-
+      // technos
+      const technos = document.createElement('p');
+      technos.innerHTML = item.technos;
+      contentContainer.appendChild(technos);
       // status
       const status = document.createElement('p');
       status.innerHTML = item.status;
       contentContainer.appendChild(status);
-
       // liens (title)
       const linksTitle = document.createElement('p');
       linksTitle.classList = 'projects-cards--card-content-linksTitle';
       linksTitle.innerHTML = "<strong>Liens :</strong>";
       contentContainer.appendChild(linksTitle);
-
       // links container
       const linksContainer = document.createElement('div');
       linksContainer.classList = 'projects-cards--card-content-links';
       linksTitle.appendChild(linksContainer);
-
       // link to website
-
       // link to website : anchor
       const linkWebsite = document.createElement('a');
       linkWebsite.href = item.url_website;
       linkWebsite.target = "_blank";
       linkWebsite.rel = "noopener noreferrer";
       linksContainer.appendChild(linkWebsite);
-
       // link to website : image
       const linkWebsiteImage = document.createElement('img');
       linkWebsiteImage.classList = 'projects-cards--card-content-links--linkwebsite--image';
       linkWebsiteImage.src = data.icons.clean;
       linkWebsiteImage.alt = `Lien vers le site ${item.title}`;
       linkWebsite.appendChild(linkWebsiteImage);
-
       // link to repository : anchor
       const linkRepository = document.createElement('a');
       linkRepository.href = item.url_repository;
       linkRepository.target = "_blank";
       linkRepository.rel = "noopener noreferrer";
       linksContainer.appendChild(linkRepository);
-
       // link to repository : image
       const linkRepositoryImage = document.createElement('img');
       linkRepositoryImage.classList = 'projects-cards--card-content-links--linkrepository--image';
       linkRepositoryImage.src = data.icons.clean;
       linkRepositoryImage.alt = `Icône et lien vers le répertoire GitHub du projet ${item.title} `;
       linkRepository.appendChild(linkRepositoryImage);
-
     });
 
     // Slideshow projects (carrousel)
@@ -402,13 +386,16 @@ const app = {
 
     function showSlides(n) {
       let index;
+
       // infinite slideshow
       if (n > slides.length) { slideIndex = 1 }
       if (n < 1) { slideIndex = slides.length }
+
       // hide all projects
       for (index = 0; index < slides.length; index++) {
         slides[index].style.display = "none";
       }
+
       // display a project
       slides[slideIndex - 1].style.display = "block";
     }
