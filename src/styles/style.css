@@ -43,14 +43,13 @@ body {
 p {
   text-align: justify;
   margin: 0.7em 0;
-  font-size: 1.15rem;
+  font-size: 1rem;
   line-height: 1.5rem;
 }
 
 /* name : mobile */
 @media only screen and (max-width: 767px) {
   p {
-    font-size: 1rem;
     line-height: 1.40rem;
   }
 }
@@ -263,17 +262,17 @@ h4 {
 /* Mobile */
 @media only screen and (max-width: 767px) {
   h2 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     margin-bottom: 0.3em;
   }
 
   h3 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin-bottom: 0.3em;
   }
 
   h4 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin-bottom: 0.5em;
   }
 
@@ -285,17 +284,17 @@ h4 {
 /* Tablet */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   h2 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     line-height: 1.6em;
   }
 
   h3 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     line-height: 1.3em;
   }
 
   h4 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     line-height: 1.3em;
   }
 
@@ -308,22 +307,22 @@ h4 {
 /* Desktop */
 @media only screen and (min-width: 960px) {
   h2 {
-    font-size: 2rem;
+    font-size: 1.9rem;
     line-height: 1.8em;
   }
 
   h3 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     line-height: 1.5em;
   }
 
   h4 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     line-height: 1.5em;
   }
 
   #about-location {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     line-height: 1.7em;
   }
 }
@@ -542,7 +541,7 @@ h4 {
 
 .projects-cards--card p {
   font-family: "Sans Regular", sans-serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.6em;
 }
 
@@ -611,29 +610,6 @@ h4 {
 /* project title */
 .projects-cards--card-content-title {
   display: inline-block;
-}
-
-a.plusdinfos {
-  position: relative;
-  bottom: 2px;
-  margin-left: 5px;
-  padding: 3px 5px;
-  background: #1a2130;
-  border: solid 1px #283146;
-  border-radius: 5px;
-  font-family: 'Mono Regular', monospace;
-  font-size: 0.7em;
-  color: #F5F5F5;
-}
-
-a.plusdinfos:hover {
-  background: #f5f5f5;
-  border: solid 1px #f5f5f5;
-  color: #1a2130;
-}
-
-button.plusdinfos a {
-  color: #F5F5F5;
 }
 
 /* project links */
