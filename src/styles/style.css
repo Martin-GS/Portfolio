@@ -647,7 +647,7 @@ h4 {
 #previousSlide {
   position: absolute;
   top: 50%;
-  left: -10px;
+  left: -30px;
   width: auto;
   margin-top: -30px;
   padding: 0.1em 0.1em 0.3em 0.2em;
@@ -661,7 +661,7 @@ h4 {
 #nextSlide {
   position: absolute;
   top: 50%;
-  right: -10px;
+  right: -30px;
   width: auto;
   margin-top: -30px;
   padding: 0.1em 0.2em 0.3em 0.1em;
@@ -670,6 +670,19 @@ h4 {
   cursor: pointer;
   user-select: none;
   transition: 0.6s ease;
+}
+
+/* Mobile */
+@media only screen and (max-width: 767px) {
+
+  #previousSlide {
+    left: -10px;
+  }
+
+  #nextSlide {
+    right: -10px;
+  }
+
 }
 
 #previousSlide:hover,
