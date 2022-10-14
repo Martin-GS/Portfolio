@@ -27,8 +27,8 @@ const data = {
         url: "https://www.linkedin.com/in/martings",
         image: "./assets/images/social-linkedin.svg",
         imagehover: "./assets/images/social-linkedin-hover.svg",
-        hashtagtitle: "#pro",
-        hashtags: "#CV<br /> #job"
+        hashtagtitle: "#social",
+        hashtags: "#pro<br /> #job<br /> #CV"
       },
       {
         title: "github",
@@ -36,7 +36,7 @@ const data = {
         image: "./assets/images/social-github.svg",
         imagehover: "./assets/images/social-github-hover.svg",
         hashtagtitle: "#repo",
-        hashtags: "#projects<br /> #versioning"
+        hashtags: "#code<br /> #versioning<br /> #projets"
       },
       {
         title: "mail",
@@ -44,7 +44,7 @@ const data = {
         image: "./assets/images/social-mail.svg",
         imagehover: "./assets/images/social-mail-hover.svg",
         hashtagtitle: "#mail",
-        hashtags: "#contact<br /> #courriel"
+        hashtags: "#contact<br /> #email<br /> #courriel"
       }
     ]
   },
@@ -53,8 +53,8 @@ const data = {
       title: "WishList",
       logo: "./assets/images/projects-wishlist.svg",
       preview: "./assets/images/projects-wishlist-preview.png",
-      description: `<strong>Description :</strong><br />Développement Front-End et déploiement d'une application permettant de créer des listes d'articles sous forme de liens et affichant les images des sites marchands.<br />Deux mois de travail. Équipe de 4 développeurs.<br />Technologies utilisées : HTML, CSS, JavaScript, React, Sass/SCSS, Bootstrap. API Rest (Node.js).`,
-      status: "<strong>Status :</strong><br /> v3 finalisée et déployée.",
+      description: `<strong>Description :</strong> Développement d'une application permettant de créer des listes d'articles sous forme de liens et affichant les images des sites marchands.<br />Deux mois de travail. Équipe de 2 développeurs Front et 2 Back.<br />Technos : HTML, CSS, JavaScript, React, Sass/SCSS, Bootstrap. API Rest (Node.js).`,
+      status: "<strong>Status :</strong> &nbsp; 🟢 &nbsp; v3",
       url_website: "https://wishlist.martin.gs",
       url_repository: "https://github.com/Martin-GS/WishList#readme",
       externallink_icon: "./assets/images/projects-link-externallink.svg",
@@ -64,8 +64,8 @@ const data = {
       title: "inicio",
       logo: "./assets/images/projects-inicio.svg",
       preview: "./assets/images/projects-inicio-preview.png",
-      description: `<strong>Description :</strong><br /> Page d'accueil pour <i>responsive</i> (mobile/desktop) permettant d'afficher des liens personnalisables, une barre de recherche, l'heure et la météo locales et un bloc-notes.<br />Technologies utilisées : HTML, CSS, Sass/SCSS, JavaScript et React pour le Front-End. Strapi pour la conception de l'API.`,
-      status: "<strong>Status :</strong><br /> En cours de développement.",
+      description: `<strong>Description :</strong> Page d'accueil responsive et personnalisable permettant d'afficher des liens personnalisables, une barre de recherche, les infos locales et un bloc-notes.<br />Technos : HTML, CSS, Sass/SCSS, JavaScript et React.<br />Créer une API REST conçue et gérée avec Strapi.`,
+      status: "<strong>Status :</strong> &nbsp; 🟠 &nbsp; v0.1",
       url_website: "https://inicio.martin.gs",
       url_repository: "https://github.com/Martin-GS/inicio",
       externallink_icon: "./assets/images/projects-link-externallink.svg",
@@ -75,8 +75,8 @@ const data = {
       title: "DevStack",
       logo: "./assets/images/projects-devstack.svg",
       preview: "./assets/images/projects-devstack-preview.png",
-      description: `<strong>Description :</strong><br />Mon carnet de notes de développement web et web mobile (FullStack).<br />Développé (en principe) pour un usage personnel afin de trouver mes notes dans un seul et même endroit, il donne un aperçu (non exhaustif) des technos que j'ai étudiées et avec lesquelles je travaille depuis décembre 2020.`,
-      status: "<strong>Status :</strong><br /> v1 finalisée et déployée",
+      description: `<strong>Description :</strong> Mon carnet de notes de développement web et web mobile FullStack.<br />Développé en principe pour un usage personnel afin de trouver mes notes dans un seul et même endroit, il donne un aperçu (non exhaustif) des technos que j'ai étudiées et avec lesquelles je travaille depuis décembre 2020.`,
+      status: "<strong>Status :</strong> &nbsp; 🟢 &nbsp; v1",
       url_website: "https://devstack.martin.gs",
       url_repository: "https://github.com/Martin-GS/DevStack",
       externallink_icon: "./assets/images/projects-link-externallink.svg",
@@ -86,9 +86,9 @@ const data = {
       title: "ToDo.js",
       logo: "./assets/images/projects-todojs.svg",
       preview: "./assets/images/projects-todojs-preview.png",
-      description: "<strong>Description :</strong><br /> <i>To-do list</i> (liste de tâches) développée <i>from scratch</i> en vanilla JavaScript.<br />Application exclusivement Front-End développée pour servir comme exemple (cela implique que les informations saisies pendant la session ne sont pas enregistrées, et disparaissent donc lorsque l'onglet est fermé ou rafraîchi).",
+      description: `<strong>Description :</strong> Liste de tâches (<i>To-do list</i>) développée en vanilla JavaScript, développée pendant ma formation en dévelopement web et web mobile.<br />Application exclusivement Front-End : les données saisies ne sont pas enregistrées en base de données, et disparaissent donc lorsque l'onglet est fermé ou rafraîchi.`,
       technos: "<strong>Technos :</strong><br /> HTML, CSS, JavaScript",
-      status: "<strong>Status :</strong><br /> v1 finalisée et déployée",
+      status: "<strong>Status :</strong> &nbsp; 🟢 &nbsp; v1",
       url_website: "https://todo.martin.gs",
       url_repository: "https://github.com/Martin-GS/ToDo.js",
       externallink_icon: "./assets/images/projects-link-externallink.svg",
@@ -98,9 +98,9 @@ const data = {
       title: "Portfolio",
       logo: "./assets/images/projects-portfolio.svg",
       preview: "./assets/images/projects-portfolio-preview.png",
-      description: `<strong>Description :</strong><br />Déployé sur le domaine martin.gs, ce portfolio affiche une brève présentation, des liens, ainsi qu'une liste de mes réalisations.<br />Ce projet a été développé <i>from scratch</i> en vanilla JavaScript.<br />C'est le site sur lequel vous vous trouvez en ce moment.`,
+      description: `<strong>Description :</strong> Déployé sur <a href="https://martin.gs">martin.gs</a>, ce portfolio est constitué de trois parties : "À propos" (présentation), "Social" (liens LinkedIn, GitHub et courriel), et "Projets" (carrousel exposant mes réalisations avec leurs liens respectifs).<br />C'est le site sur lequel vous vous trouvez en ce moment.`,
       technos: "<strong>Technos :</strong><br /> HTML, CSS, JavaScript",
-      status: "<strong>Status :</strong><br /> v1 finalisée et déployée",
+      status: "<strong>Status :</strong> &nbsp; 🟢 &nbsp; v2",
       url_website: "https://martin.gs/",
       url_repository: "https://github.com/Martin-GS/Portfolio",
       externallink_icon: "./assets/images/projects-link-externallink.svg",

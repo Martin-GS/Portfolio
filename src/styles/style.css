@@ -514,7 +514,6 @@ h4 {
     flex-direction: column;
     max-width: 475px;
     margin: 1em;
-    padding: 0.5em;
   }
 }
 
@@ -565,9 +564,9 @@ h4 {
 
 /* logo */
 .projects-cards--card-preview-logo {
-  width: 75px;
+  width: 53px;
   position: absolute;
-  top: 20px;
+  top: 33px;
   right: 15px;
 }
 
@@ -648,40 +647,34 @@ h4 {
 #previousSlide {
   position: absolute;
   top: 50%;
+  left: -10px;
   width: auto;
-  margin-top: -22px;
-  padding: 0.4em;
-  background-color: #0D1017;
-  transition: 0.6s ease;
-  border: solid 1px #f5f5f5;
-  border-radius: 0 0.7em 0.7em 0;
-  font-size: 20px;
+  margin-top: -30px;
+  padding: 0.1em 0.1em 0.3em 0.2em;
+  font-size: 35px;
   color: #F5F5F5;
-  user-select: none;
   cursor: pointer;
+  user-select: none;
+  transition: 0.6s ease;
 }
 
 #nextSlide {
   position: absolute;
   top: 50%;
-  right: 0;
+  right: -10px;
   width: auto;
-  margin-top: -22px;
-  padding: 0.5em;
-  background-color: #0D1017;
-  transition: 0.6s ease;
-  border: solid 1px #f5f5f5;
-  border-radius: 0.7em 0 0 0.7em;
-  font-size: 20px;
+  margin-top: -30px;
+  padding: 0.1em 0.2em 0.3em 0.1em;
+  font-size: 35px;
   color: #F5F5F5;
-  user-select: none;
   cursor: pointer;
+  user-select: none;
+  transition: 0.6s ease;
 }
 
 #previousSlide:hover,
 #nextSlide:hover {
-  color: #0D1017;
-  background-color: #F5F5F5;
+  font-size: 37px;
 }
 
 /* ---------- FOOTER ---------- */
